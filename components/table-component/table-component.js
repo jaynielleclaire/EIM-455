@@ -31,21 +31,29 @@ class TableComponent extends HTMLElement {
   render() {
     const div = document.createElement("div");
     div.innerHTML = `
-    <slot></slot>
-    <sub>${this.subtitle}</sub>
+    <div class="container">
+      <div class="caption">${this.subtitle}</div>
+      <slot></slot>
+    </div>
     <style>
       :host {
         display: block;
         text-align: center;
       }
+      
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
 
-      sub {
+      .caption {
         font-size: 1rem;
         font-style: italic;
+        margin-bottom: 1rem;
       }
     </style>
-  `;
-
+    `;
+    
     this.shadowRoot.appendChild(div);
   }
 }
