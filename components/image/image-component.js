@@ -28,7 +28,8 @@ class ImageComponent extends HTMLElement {
       }
 
       img {
-        width: 100%;
+        height: 5
+        width: 5;
       }
 
       sub {
