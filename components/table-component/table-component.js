@@ -57,6 +57,47 @@ new gridjs.Grid({
   ],
 }).render(document.getElementById("table-5"));
 
+new gridjs.Grid({
+  columns: ["Category", "Criteria", "Rationale", "Metric", "Measurement"],
+  data: [
+    [
+      "Durability",
+      "Must last at least 5 years with regular use",
+      "More cost-effective as it provides better return on investment (ROI) for hospitals and reduces waste over time.",
+      "Material degradation rate (e.g., percentage of wear, loss of shielding efficiency over time)",
+      "Accelerated wear tests (e.g., simulating 5 years of use through mechanical stress and environmental exposure) and longitudinal radiation attenuation tests"
+    ],
+    [
+      "Sustainability",
+      "Uses recyclable materials for construction (also the process around it)",
+      "A differentiating factor compared to competitors as lead is toxic to the environment.",
+      "Percentage of processes and materials that is sustainable (%)",
+      "Material, process analysis and certification"
+    ],
+    [
+      "Hygiene",
+      "Surface has a bacterial reduction rate of at least 99% after 0.5 hours",
+      "To further support the quick turnover between surgeries",
+      "Bacterial reduction rate (%)",
+      "Antimicrobial testing"
+    ],
+    [
+      "Efficacy",
+      ">10% lower thermal resistance than a standard lead apron",
+      "Offers better heat dissipation to keep users cooler. 75% of orthopaedics HCP interviewees complained about having to don sweaty gowns due to back-to-back surgeries with no time in between to properly clean them.",
+      "Thermal resistance (%)",
+      "Thermal conductivity testing"
+    ],
+    [
+      "Usability",
+      "Adjustable fit for users with a weight range of 40 kg to 100 kg and a height range of 140 cm to 190 cm",
+      "To fit different body types for better fit and better weight distribution",
+      "Adjustable size range (eg. cm)",
+      "Anthropometric measurements and fit testing"
+    ]
+  ]
+}).render(document.getElementById("table-c"));
+
 class TableComponent extends HTMLElement {
   static get observedAttributes() {
     return ["subtitle"];
