@@ -18,6 +18,17 @@ new gridjs.Grid({
   ],
 }).render(document.getElementById("table-2"));
 
+new gridjs.Grid({
+  columns: ["Category", "Criteria", "Rationale", "Metric", "Measurement"],
+  data: [
+    ["Efficacy", "Block at least 90% of potential radiation exposure", "Current alternatives to lead gowns provide less radiation protection.", "Percentage of radiation blocked (% radiation attenuation)", "Radiation shielding tests (e.g., using X-ray sources and radiation detectors)"],
+    ["Usability", "Weight must not exceed 7 kg", "Current lead gowns weigh around 7 kg. Fatigue from this weight is the top complaint.", "Weight (kg)", "Weighing scale"],
+    ["Usability", "Allow users to bend down with ease", "Enables surgeons to perform procedures comfortably.", "Maximum angle of bending without cracking", "Bend test"],
+    ["Usability", "Comfortable to wear for at least 4 hours", "Prevents fatigue due to prolonged wear.", "Comfort rating (scale of 1-10)", "Subjective assessment by a panel of users"],
+    ["Cost", "Not exceed 20% more than current lead aprons (SG$1,000)", "To remain appealing to key purchasing decision-makers (e.g., hospitals).", "Percentage cost increase (%)", "Market research and cost analysis"],
+  ],
+}).render(document.getElementById("table-3"));
+
 class TableComponent extends HTMLElement {
   static get observedAttributes() {
     return ["subtitle"];
