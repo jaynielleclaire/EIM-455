@@ -45,6 +45,18 @@ new gridjs.Grid({
   ],
 }).render(document.getElementById("table-4"));
 
+new gridjs.Grid({
+  columns: ["Category", "Criteria", "Concept 1: 'LatticeGuard Pro'", "Concept 2: 'SuspendShield Flex'", "Concept 3: 'NanoTech ArtiFit'"],
+  data: [
+    ["Efficacy", "Block at least 90% of potential radiation exposure", "2", "1", "3"],
+    ["Usability", "Weight must not exceed 7 kg", "2", "3", "1"],
+    ["Usability", "Allow users to bend down with ease", "3", "1", "2"],
+    ["Usability", "Comfortable to wear for at least 4 hours", "2", "3", "1"],
+    ["Cost", "Not exceed 20% more than current lead aprons (SG$1,000)", "2", "3", "1"],
+    ["Total", "", "11", "11", "8"]
+  ],
+}).render(document.getElementById("table-5"));
+
 class TableComponent extends HTMLElement {
   static get observedAttributes() {
     return ["subtitle"];
