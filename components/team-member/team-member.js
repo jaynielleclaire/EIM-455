@@ -24,31 +24,32 @@ class TeamMember extends HTMLElement {
     <p>${this.department}</p>
     <p>${this.year}</p>
     <style>
-      :host {
-        display: block;
-        max-width: 120px;
-        text-align: center;
-      }
+  :host {
+    display: block;
+    max-width: 120px;
+    text-align: center;
+  }
 
-      img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        display: block;
-        margin: auto;
-      }
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 100px; /* Ensure it doesn't exceed a maximum size */
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+  }
 
-      p {
-        text-align: center;
-        margin: 8px 0;
-      }
+  p {
+    text-align: center;
+    margin: 8px 0;
+  }
 
-      @media (max-width: 599px) {
-        img {
-          display: none;
-        }
-      }
-    </style>
+  @media (max-width: 600px) {
+    img {
+      display: none;
+    }
+  }
+</style>
   `;
 
     this.shadowRoot.appendChild(div);
