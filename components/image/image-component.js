@@ -22,21 +22,24 @@ class ImageComponent extends HTMLElement {
     <img id="${this.tag}" src="${this.source}" alt="${this.subtitle}">
     <sub>${this.subtitle}</sub>
     <style>
-      :host {
-        display: block;
-        text-align: center;
-      }
+  :host {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
 
-      img {
-        height: 3
-        width: 3;
-      }
+  img {
+    max-width: 300px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
 
-      sub {
-        font-size: 1rem;
-        font-style: italic;
-      }
-    </style>
+  sub {
+    display: block;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 5px;
+  }
+</style>
   `;
 
     this.shadowRoot.appendChild(div);
