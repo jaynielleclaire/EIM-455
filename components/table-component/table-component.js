@@ -29,6 +29,22 @@ new gridjs.Grid({
   ],
 }).render(document.getElementById("table-3"));
 
+new gridjs.Grid({
+  columns: ["No.", "Functional Requirement", "Description", "Justification"],
+  data: [
+    ["1", "Radiation Protection", "Utilizing lead or non-lead composites that achieve the same protection levels as 0.50 mm Lead.", "Primary function of the gown is radiation protection."],
+    ["2", "Weight Reduction", "Use lightweight, high-density materials that maintain radiation protection levels equivalent to traditional lead but with reduced mass.", "Reducing the overall weight of the gown helps minimize fatigue, allowing for better comfort and mobility. "],
+    ["3", "Ease of Movement", "Flexible, elastic material at key movement areas, such as shoulders and hips, to allow freedom of motion.", "Enhanced mobility reduces fatigue and helps surgeons perform complex tasks without feeling restricted by their attire."],
+    ["4", "Weight Support", "Incorporate structural reinforcements to help alleviate direct weight load on specific body areas, such as the shoulders and back.", "By transferring the gown's weight across a larger surface area or utilizing supportive components, strain on specific muscle groups is minimized."],
+    ["5", "Weight Distribution System", "To evenly spread the gown’s weight across the wearer’s body.", "Distributing weight reduces localized fatigue and discomfort, especially for surgeons who wear heavy gowns for extended periods."],
+    ["6", "Quick-Release Mechanism", "Integrate a quick-release mechanism for easy removal of the gown.", "This feature provides an efficient way to remove the gown in case of an emergency or when a rapid transition is required, saving time and enhancing safety."],
+    ["7", "Ergonomic Design for Long Wear Duration", "Padding at pressure points (e.g., shoulders, neck) to enhance comfort for extended usage.", "Ergonomic padding distributes pressure and helps maintain comfort, supporting the user through longer procedures."],
+    ["8", "Sweat Absorption and Comfort", "Moisture-wicking or antimicrobial linings that draw sweat away from the skin, keeping the wearer dry and comfortable.", "Long periods in PPE can cause perspiration, leading to discomfort and irritation. This feature helps prevent skin issues and discomfort from prolonged moisture exposure."],
+    ["9", "Ventilation", "To enhance air circulation inside the gown, especially in heat-prone areas (e.g., back, underarms).", "Ventilation reduces heat accumulation and helps regulate the body temperature, preventing fatigue and discomfort caused by overheating. Improved airflow also decreases the likelihood of sweat buildup, which can make PPE uncomfortable over time."],
+    ["10", "Size and Fit Adjustment", "Quick-release and adjustable closures or customizable Velcro panels to allow a tailored fit for different body types and sizes.", "Ill-fitting PPE can lead to discomfort, reduced mobility, and even safety hazards if improperly secured."]
+  ],
+}).render(document.getElementById("table-4"));
+
 class TableComponent extends HTMLElement {
   static get observedAttributes() {
     return ["subtitle"];
