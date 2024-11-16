@@ -1,11 +1,12 @@
 new gridjs.Grid({
-  columns: ["Name", "Email", "Phone Number"],
+  columns: ["No.", "Problem Classification", "Interview Quote"],
   data: [
-    ["John", "john@example.com", "(353) 01 222 3333"],
-    ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
-    ["Eoin", "eoin@gmail.com", "0097 22 654 00033"],
-    ["Sarah", "sarahcdd@gmail.com", "+322 876 1233"],
-    ["Afshin", "afshin@mail.com", "(353) 22 87 8356"],
+    ["1", "Weight", "'(It is) more likely to get backpain/spondylosis than radiation-related cancers.'"],
+    ["2", "Weight", "'The worst part is how heavy the lead aprons are.'"],
+    ["3", "Weight", "'Weight of the lead apron causes muscle strain, some bad enough to take hospitalisation leave for 2 weeks.'"],
+    ["4", "Weight, Hygiene", "'Weight of the lead apron and hygiene concerns, we don't know how often they are cleaned. I prefer two-piece set but it's not always available; for taller surgeons, they have no choice but to wear the full-size gown.'"],
+    ["5", "Weight, Mobility, Hygiene", "'Weight of the lead apron makes it hard to move, some senior surgeons find the thyroid shield too warm and uncomfortable and have decided not to wear it; we keep each other accountable but at the end of the day, everyone is responsible for their own body.'"],
+    ["6", "Hygiene", "'Lead apron is worn underneath scrubs, it's really sweaty, and there's no time to clean it before scrubbing in.'"],
   ],
 }).render(document.getElementById("table-1"));
 
