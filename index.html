@@ -96,8 +96,8 @@
     </div>
 
     <br />
-    <sl-divider></sl-divider>
     <br />
+    <sl-divider></sl-divider>
     <div>
 
       <!-- This is an example of what a section might look like -->
@@ -135,6 +135,7 @@
     <div>
       <div id="section-header-2">
         <h2> 2. Problem Clarification </h2>
+        <div id="sub-section-2-header-1"></div>
         <h3> 2.1 Key Insights </h3>
         <table-component subtitle="Table 1: Insights from primary research with healthcare professionals (see more in Appendix B) [10]">
             <div id="table-1"></div>
@@ -158,37 +159,23 @@
           subtitle="Figure 6: 100% of orthopaedics interviewees reported concerns regarding the weight of lead aprons [10]"></image-component>
       </div>
 
-      <div id="sub-section-2-header-1">
-        <h3>2.1. Sub-section Header 1</h3>
-        <p>
-          Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
-          Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
-          etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
-          vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
-          Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
-          fames ac. <a href="#image">Link to the image above</a>
-        </p>
-
-        <!-- This is an example of how you might use the video component -->
-        <video-component tag="rick" source="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          subtitle="Video: Never gonna give you up?"></video-component>
-      </div>
-
       <div id="sub-section-2-header-2">
-        <h3>2.2. Sub-section Header 2</h3>
+        <h3> 2.2 Problem Statement </h3>
         <p>
-          Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Dignissim convallis aenean et tortor at
-          risus viverra adipiscing. Facilisi nullam vehicula ipsum a arcu cursus. Adipiscing elit pellentesque
-          habitant
-          morbi tristique senectus et netus. Turpis massa tincidunt dui ut ornare lectus. Suspendisse sed nisi lacus
-          sed. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Ut ornare lectus sit amet est
-          placerat in egestas. Magna fringilla urna porttitor rhoncus. Imperdiet dui accumsan sit amet.
+            The weight of the lead apron worn by orthopaedic surgical teams during fluoroscopy-guided surgeries causes significant fatigue, compromising their well-being and quality of life. This physical strain also limits the number of surgeries they can perform each week, impacting both healthcare delivery and practitioner health.
         </p>
 
-        <!-- This is an example of how you might use the table component -->
-        <table-component subtitle="Table: Demo table">
-          <div id="table-1"></div>
-        </table-component>
+      <div id="sub-section-2-header-3">
+        <h3> 2.3 Existing Solutions </h3>
+        <h4> 2.3.1 Xenolite Gowns </h4>
+        <p>
+            Xenolite gowns provide lead-free, lightweight, and flexible x-ray protection by using a carefully balanced mix of antimony and tungsten as shielding elements. This combination is designed to optimize weight while maximizing protection within the diagnostic imaging range of 80–100 kV. Antimony primarily attenuates lower-energy photons (below 88 keV), while tungsten, a heavier element, is effective against higher-energy radiation (above 69 keV). The powdered antimony and tungsten particles are uniformly embedded in a durable yet flexible Dow elastomer matrix, developed by Dow-DuPont for applications requiring resilience and flexibility, like running shoes and cables. This elastomer was chosen for its balance of strength and flexibility, enhancing the apron’s durability and resistance to cracking. Furthermore, the material is environmentally friendly as it is not cross-linked, meaning it can be recycled or safely disposed of as non-hazardous waste [11]. However, Xenolite provides a lead equivalency of 0.5 mm at 80 keV but may offer less protection at higher energy levels (e.g., 100 keV as seen in Table 2), where advanced imaging equipment is often used [5].
+        </p>
+        <table-component subtitle="Table 2: Comparison of transmission rates and densities of 0.50 mm Xenolite and 0.50 mm Lead aprons">
+            <div id="table-2"></div>
+          </table-component>
+          <image-component tag="xenolite-gown-image" source="assets/xenolite-gown.png"
+          subtitle="Figure 7: Xenolite Wrap-around Gown [13]"></image-component>  
       </div>
     </div>
 

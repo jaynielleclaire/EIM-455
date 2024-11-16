@@ -10,6 +10,14 @@ new gridjs.Grid({
   ],
 }).render(document.getElementById("table-1"));
 
+new gridjs.Grid({
+  columns: ["Apron", "0.50 mm Xenolite [11]", "0.50 mm Xenolite [11]", "0.50 mm Lead [12]", "0.50 mm Lead [12]"],
+  data: [
+    ["Energy level", "Transmission rate", "Density", "Transmission rate", "Density"],
+    ["100keV", "6.2%", "5.40 kg/m2", "5%", "5.65 kg/m2"],
+  ],
+}).render(document.getElementById("table-2"));
+
 class TableComponent extends HTMLElement {
   static get observedAttributes() {
     return ["subtitle"];
