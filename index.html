@@ -2,717 +2,857 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>EIM-455</title>
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EIM-455</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
-  <script type="module"
-    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
 
-  <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css">
 
-  <link rel="stylesheet" href="./components/team-member/team-member.css">
-  <script type="module" src="./components/team-member/team-member.js"></script>
+    <link rel="stylesheet" href="./components/team-member/team-member.css">
+    <script type="module" src="./components/team-member/team-member.js"></script>
 
-  <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
+    <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
 
-  <script type="module" src="./components/image/image-component.js"></script>
+    <script type="module" src="./components/image/image-component.js"></script>
 
-  <script type="module" src="./components/video/video.js"></script>
+    <script type="module" src="./components/video/video.js"></script>
 
-  <link rel="stylesheet" href="./components/references/references.css">
+    <link rel="stylesheet" href="./components/references/references.css">
 
-  <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
-  <script src="./components/scroll-to-top/scroll-to-top.js"></script>
+    <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
+    <script src="./components/scroll-to-top/scroll-to-top.js"></script>
 
-  <script src="./components/table-component/table-component.js"></script>
+    <script src="./components/table-component/table-component.js"></script>
 
-  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 </head>
 
 <body>
-  <div class="content">
-    <h1>EIM-455: Enhancing radiation safety for surgeries</h1>
+    <div class="content">
+        <h1>EIM-455: Enhancing radiation safety for surgeries</h1>
 
-    <!-- This is the team member component use to display details about your team members -->
-    <div class="team-member-wrapper">
-      <team-member avatar="assets/Jaynielle Passport Photo 2024.jpeg" name="Jaynielle Claire Tan Pineda" department="Biomedical Engineering"
-        year="2024"></team-member>
-    </div>
-
-    <!-- This is a divide from the shoelace library for aesthetic purpose -->
-    <sl-divider></sl-divider>
-
-    <!-- This is the table-of-content component use to define all of the link directly to each section -->
-    <div class="table-of-content">
-      <h2>Table of Contents</h2>
-      <sl-tree>
-        <sl-tree-item>
-          <a href="#section-header-1">1. Introduction</a>
-        </sl-tree-item>
-
-        <sl-tree-item expanded>
-          <a href="#section-header-2">2. Problem Clarification</a>
-          <sl-tree-item>
-            <a href="#sub-section-2-header-1">2.1 Key Insights</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-2-header-2">2.2 Problem Statement</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-2-header-3">2.3 Existing Solutions</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-2-header-3-1">2.3.1 Xenolite Gowns</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-2-header-3-2">2.3.2 Suspended Radiation Protection System (Zero-Gravity) </a>
-          </sl-tree-item>
-        </sl-tree-item>
-
-        <sl-tree-item expanded>
-            <a href="#section-header-3">3. Product Design</a>
-            <sl-tree-item>
-              <a href="#sub-section-3-header-1">3.1 Value Proposition</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#sub-section-3-header-2">3.2 Design Specifications</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#sub-section-3-header-3">3.3 Functional Requirements</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#sub-section-3-header-4">3.4 Concept Generation</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#sub-section-3-header-5">3.5 Concept Selection</a>
-            </sl-tree-item>
-          </sl-tree-item>
-
-        <sl-tree-item>
-            <a href="#section-header-4">4. Concept</a>
-          </sl-tree-item>
-          
-        <sl-tree-item>
-            <a href="#section-header-5">5. Prototyping and Testing</a>
-          </sl-tree-item>
-                    
-        <sl-tree-item>
-            <a href="#section-header-6">6. Future Work</a>
-          </sl-tree-item>
-
-        <sl-tree-item>
-          <a href="#references">References</a>
-        </sl-tree-item>
-        
-        <sl-tree-item>
-            <a href="#appendix-a">Appendix A: Biweekly Meetings with Clinical Mentor</a>
-          </sl-tree-item>
-                  
-        <sl-tree-item>
-            <a href="#appendix-b">Appendix B: Primary Research with Healthcare Professionals</a>
-          </sl-tree-item>
-                            
-        <sl-tree-item>
-            <a href="#appendix-c">Appendix C: Good-to-have Design Specifications [1]</a>
-          </sl-tree-item>
-                                      
-        <sl-tree-item>
-            <a href="#appendix-d">Appendix D: Functional Requirements in Detail</a>
-          </sl-tree-item>
-                                                
-        <sl-tree-item>
-            <a href="#appendix-e">Appendix E: Concepts Generated in Detail</a>
-          </sl-tree-item>
-                                                          
-        <sl-tree-item>
-            <a href="#appendix-f">Appendix F: Justification of Concepts’ Scores</a>
-          </sl-tree-item>
-      </sl-tree>
-    </div>
-    <sl-divider></sl-divider>
-
-    <div>
-        <div id=""acknowledgements">
-            <h2> Acknowledgements </h2>
-            <p>
-                I would like to express my gratitude to my Duke-NUS Health Innovator Programme (DHIP) teammates, Danielle Grace Yap (Duke-NUS medical student) and Amy Lee (Master of Business Administration student), for their invaluable contributions to our project. Their diverse expertise and insights, drawn from their professional backgrounds and respective coursework, have greatly enriched our work.
-            </p>
-            <p>
-                I am also deeply appreciative of Dr. Woo Yew Lok, an orthopedic surgery consultant, and Ms. Cecelia Zhou, Vice President and General Manager of Stryker, for serving as our clinical and industry mentors. I am grateful for the time they dedicated to attending our biweekly meetings, their enthusiasm in providing timely feedback, and their generous support in offering connections and assistance.
-            </p>
-            <p>
-                Additionally, I would like to extend my thanks to the DHIP teaching faculty, including Dr. Rena Dharmawan (programme director), Dr. Bipin Bhola (curriculum lead and clinical discovery), Mr. Hugh Mason (communication), Dr. Mark Chong (design), Mr. Dennis Ong (design), Mr. Alok Mishra (commercial discovery), Dr. Agnes Xue (design), and Dr. Rama Sethuraman (regulatory), as well as the Duke-NUS Centre for Technology and Development (CTeD) team for their guidance on intellectual property.
-            </p>
-            <p>
-                Finally, I would like to thank my DHIP classmates for their active participation in class discussions, with special appreciation for my fellow engineering fellows, Chan Syn-I, Julian Tan, and Lakshmi Sujeesh.
-            </p>
-        </div>
-    </div>
-
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-
-      <!-- This is an example of what a section might look like -->
-      <div id="section-header-1">
-        <h2> 1. Introduction </h2>
-        <p>
-            Orthopedic surgeries often require intermittent use of pulsed fluoroscopy (Fig 1)—real-time X-ray imaging—at various points throughout the procedure. Such procedures include hip fracture, knee replacement, minimally invasive surgeries, and hand surgeries [1]. This imaging involves taking numerous radiation "shots" or pulses, typically around a hundred in a single surgery, though the exact number depends on the surgeon’s expertise; more experienced surgeons may require fewer images [1]. Prolonged exposure to such radiation over years can increase the risk of thyroid cancer, making protective measures essential. For instance, using a thyroid shield can reduce effective radiation dose by approximately 2.5 times and overall exposure by nearly 50% [2].
-        </p>
-        <p>
-            During fluoroscopy, the surgical team members—including the surgeon, radiologic technician, surgical assistant, and scrub nurse—wear personal protective equipment (PPE) like thyroid shields (Fig 2) and lead gowns (typically 0.5 mm thick, fully wrapped as seen in Fig 3) to minimize exposure. Other team members, such as the circulating nurse and anaesthesiologist, usually stay behind a lead shield (Fig 4) when imaging is active. The layout of personnel around the operating table is often arranged to optimize both access and protection, as shown in Fig 5.
-        </p>
-        <p> Lead gowns are composed of three layers: </p>
-        <p> 1.	Interior lining (canvas): A soft material providing comfort as it is the layer closest to the user's body. </p>
-        <p> 2.	Radiation protective material (lead): The core layer responsible for shielding the user from radiation. </p>
-        <p> 3.	Exterior material (vinyl or nylon): The outermost, durable, and water-resistant layer that protects the radiation shielding material from damage and wear [1]. </p>
-        <p>
-            Lead gowns are highly effective, blocking 90-95% of scattered radiation [3]. However, they are quite heavy, ranging from 2 to 7 kilograms [4], and wearing them for extended periods can lead to fatigue and musculoskeletal strain [5]. This project, therefore, seeks to improve the usability and comfort of lead aprons to reduce these physical burdens while maintaining their protective function.
-        </p>
-        <image-component tag="c-arm-image" source="assets/c-arm.jpg"
-          subtitle="Figure 1: C-arm fluoroscopy machine [6]"></image-component>
-          <image-component tag="thyroid-shield-image" source="assets/thyroid-shield.png"
-          subtitle="Figure 2: Thyroid shield [7]"></image-component>
-          <image-component tag="current-lead-gown-image" source="assets/current-lead-gown.png"
-          subtitle="Figure 3: Full wrap lead gown currently used in Singapore hospitals [8]"></image-component>
-          <image-component tag="lead-shield-image" source="assets/lead-shield.jpg"
-          subtitle="Figure 4: Mobile x-ray protective screen [9]"></image-component>
-          <image-component tag="surgical-layout-image" source="assets/surgical-team-layout.png"
-          subtitle="Figure 5: Layout of orthopaedic surgical team for a knee replacement (RT: Radiologist technician; SA: Scrub assistant; CN: Circulating nurse [moves around, no standard position]; A: Anaesthesiologist; S: Surgeon; SN: Scrub nurse) {Black: wears lead aprons; Blue: stays behind lead shield}"></image-component>
-      </div>
-    </div>
-
-
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-      <div id="section-header-2">
-        <h2> 2. Problem Clarification </h2>
-
-        <div id="sub-section-2-header-1">
-        <h3> 2.1 Key Insights </h3>
-        <table-component subtitle="Table 1: Insights from primary research with healthcare professionals (see more in Appendix B) [10]">
-            <div id="table-1"></div>
-          </table-component>
-        <p>
-            Our primary research with healthcare professionals (HCP) highlighted critical issues regarding weight, hygiene, and mobility in current radiation PPE. Below is a breakdown of each category based on practitioners' feedback:
-        </p>
-        <p>
-            Weight: The heavy lead aprons, often weighing up to 7kg, create significant physical strain on practitioners, leading to muscle fatigue and back pain. 
-        </p>
-        <p>
-            Hygiene: Shared lead aprons bring about hygiene concerns, as practitioners are uncertain about how often these are cleaned. Due to the intense physical activity involved, wearing aprons underneath scrubs leads to excessive sweating, which raises discomfort levels. Practitioners indicated that cleaning these aprons between uses isn't always feasible, adding to the hygiene issue.
-        </p>
-        <p>
-            Mobility: The bulkiness and weight of the PPE restrict practitioners' movement, making it challenging to perform certain procedures.
-        </p>
-        <p>
-            Among the issues identified, the weight of lead aprons emerged as a top concern, significantly impacting comfort and safety during prolonged procedures. Notably, 100% of interviewees from the orthopaedics department cited the weight of the aprons as an issue (Fig. 6).
-        </p>
-        <image-component tag="weight-pie-chart-image" source="assets/weight-pie-chart.png"
-          subtitle="Figure 6: 100% of orthopaedics interviewees reported concerns regarding the weight of lead aprons [10]"></image-component>
+        <!-- This is the team member component use to display details about your team members -->
+        <div class="team-member-wrapper">
+            <team-member avatar="assets/Jaynielle Passport Photo 2024.jpeg" name="Jaynielle Claire Tan Pineda"
+                department="Biomedical Engineering" year="2024"></team-member>
         </div>
 
-      <div id="sub-section-2-header-2">
-        <h3> 2.2 Problem Statement </h3>
-        <p>
-            The weight of the lead apron worn by orthopaedic surgical teams during fluoroscopy-guided surgeries causes significant fatigue, compromising their well-being and quality of life. This physical strain also limits the number of surgeries they can perform each week, impacting both healthcare delivery and practitioner health.
-        </p>
+        <!-- This is a divide from the shoelace library for aesthetic purpose -->
+        <sl-divider></sl-divider>
+
+        <!-- This is the table-of-content component use to define all of the link directly to each section -->
+        <div class="table-of-content">
+            <h2>Table of Contents</h2>
+            <sl-tree>
+                <sl-tree-item>
+                    <a href="#section-header-1">1. Introduction</a>
+                </sl-tree-item>
+
+                <sl-tree-item expanded>
+                    <a href="#section-header-2">2. Problem Clarification</a>
+                    <sl-tree-item>
+                        <a href="#sub-section-2-header-1">2.1 Key Insights</a>
+                    </sl-tree-item>
+                    <sl-tree-item>
+                        <a href="#sub-section-2-header-2">2.2 Problem Statement</a>
+                    </sl-tree-item>
+                    <sl-tree-item>
+                        <a href="#sub-section-2-header-3">2.3 Existing Solutions</a>
+                    </sl-tree-item>
+                    <sl-tree-item>
+                        <a href="#sub-section-2-header-3-1">2.3.1 Xenolite Gowns</a>
+                    </sl-tree-item>
+                    <sl-tree-item>
+                        <a href="#sub-section-2-header-3-2">2.3.2 Suspended Radiation Protection System (Zero-Gravity)
+                        </a>
+                    </sl-tree-item>
+                </sl-tree-item>
+
+                <sl-tree-item expanded>
+                    <a href="#section-header-3">3. Product Design</a>
+                    <sl-tree-item>
+                        <a href="#sub-section-3-header-1">3.1 Value Proposition</a>
+                    </sl-tree-item>
+                    <sl-tree-item>
+                        <a href="#sub-section-3-header-2">3.2 Design Specifications</a>
+                    </sl-tree-item>
+                    <sl-tree-item>
+                        <a href="#sub-section-3-header-3">3.3 Functional Requirements</a>
+                    </sl-tree-item>
+                    <sl-tree-item>
+                        <a href="#sub-section-3-header-4">3.4 Concept Generation</a>
+                    </sl-tree-item>
+                    <sl-tree-item>
+                        <a href="#sub-section-3-header-5">3.5 Concept Selection</a>
+                    </sl-tree-item>
+                </sl-tree-item>
+
+                <sl-tree-item>
+                    <a href="#section-header-4">4. Concept</a>
+                </sl-tree-item>
+
+                <sl-tree-item>
+                    <a href="#section-header-5">5. Prototyping and Testing</a>
+                </sl-tree-item>
+
+                <sl-tree-item>
+                    <a href="#section-header-6">6. Future Work</a>
+                </sl-tree-item>
+
+                <sl-tree-item>
+                    <a href="#references">References</a>
+                </sl-tree-item>
+
+                <sl-tree-item>
+                    <a href="#appendix-a">Appendix A: Biweekly Meetings with Clinical Mentor</a>
+                </sl-tree-item>
+
+                <sl-tree-item>
+                    <a href="#appendix-b">Appendix B: Primary Research with Healthcare Professionals</a>
+                </sl-tree-item>
+
+                <sl-tree-item>
+                    <a href="#appendix-c">Appendix C: Good-to-have Design Specifications [1]</a>
+                </sl-tree-item>
+
+                <sl-tree-item>
+                    <a href="#appendix-d">Appendix D: Functional Requirements in Detail</a>
+                </sl-tree-item>
+
+                <sl-tree-item>
+                    <a href="#appendix-e">Appendix E: Concepts Generated in Detail</a>
+                </sl-tree-item>
+
+                <sl-tree-item>
+                    <a href="#appendix-f">Appendix F: Justification of Concepts’ Scores</a>
+                </sl-tree-item>
+            </sl-tree>
         </div>
+        <sl-divider></sl-divider>
 
-      <div id="sub-section-2-header-3">
-        <h3> 2.3 Existing Solutions </h3>
-        
-        <div id="sub-section-2-header-3-1">
-        <h4> 2.3.1 Xenolite Gowns </h4>
-        <p>
-            Xenolite gowns provide lead-free, lightweight, and flexible x-ray protection by using a carefully balanced mix of antimony and tungsten as shielding elements. This combination is designed to optimize weight while maximizing protection within the diagnostic imaging range of 80–100 kV. Antimony primarily attenuates lower-energy photons (below 88 keV), while tungsten, a heavier element, is effective against higher-energy radiation (above 69 keV). The powdered antimony and tungsten particles are uniformly embedded in a durable yet flexible Dow elastomer matrix, developed by Dow-DuPont for applications requiring resilience and flexibility, like running shoes and cables. This elastomer was chosen for its balance of strength and flexibility, enhancing the apron’s durability and resistance to cracking. Furthermore, the material is environmentally friendly as it is not cross-linked, meaning it can be recycled or safely disposed of as non-hazardous waste [11]. However, Xenolite provides a lead equivalency of 0.5 mm at 80 keV but may offer less protection at higher energy levels (e.g., 100 keV as seen in Table 2), where advanced imaging equipment is often used [5].
-        </p>
-        <table-component subtitle="Table 2: Comparison of transmission rates and densities of 0.50 mm Xenolite and 0.50 mm Lead aprons">
-            <div id="table-2"></div>
-          </table-component>
-          <image-component tag="xenolite-gown-image" source="assets/xenolite-gown.jpg"
-          subtitle="Figure 7: Xenolite Wrap-around Gown [13]"></image-component>  
-      </div>
-      
-    <div id="sub-section-2-header-3-2">
-        <h4> 2.3.2	Suspended Radiation Protection System (Zero-Gravity) </h4>
-        <p>
-            Zero-Gravity is a weightless support system that uses a suspended, 1.0 mm lead shield, magnetically attached to a vest worn by the operator. This design allows the system to move smoothly with the user and be easily retracted when not in use. Available in various configurations—such as floor unit, monorail, and hinged swing-arm versions—Zero-Gravity can adapt to different room layouts and procedure requirements. By eliminating the need for heavy protective gear, it minimizes the risk of orthopaedic strain for clinicians, enhancing comfort without compromising radiation protection [14]. Although Zero-Gravity allows some movement, it restricts certain actions like bending and can limit mobility, especially when walking [1]. 
-        </p>
-        <image-component tag="zero-gravity-image" source="assets/zero-gravity.png"
-          subtitle="Figure 8: (A) Suspended Radiation Protection System (Zero-Gravity); (B) Floor Unit; (C) Monorail; (D) Hinged Swing Arm; (E) Monorail Hinged Swing Arm [14]"></image-component> 
-        </div>
-    </div>
-    </div>
-    </div>
-
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-      <div id="section-header-3">
-        <h2> 3. Product Design </h2>
-
-        <div id="sub-section-3-header-1">
-        <h3> 3.1 Value Proposition </h3>
-        <p>
-            Our product, ShieldX, improves comfort and reduces fatigue specifically associated with the weight of radiation PPE (lead gowns) for orthopaedic surgical teams in Singapore. By enhancing weight distribution and decreasing perceived heaviness, ShieldX enables greater mobility and freedom of movement during complex procedures. ShieldX aims to increase user satisfaction regarding the weight aspect of PPE from 0% to 60% by April 2025, all while maintaining current radiation protection standards.
-        </p>
-        </div>
-
-        <div id="sub-section-3-header-2">
-            <h3> 3.2 Design Specifications </h3>
-            <table-component subtitle="Table 3: Must-have Design Specifications [1]">
-                <div id="table-3"></div>
-              </table-component>
-              <p>
-                Additional design specifications are provided in Appendix C.
-              </p>
-              </div>
-        
-        <div id="sub-section-3-header-3">
-            <h3> 3.3 Functional Requirements </h3>
-            <table-component subtitle="Table 4: Functional Requirements listed from most to least important [1]">
-                <div id="table-4"></div>
-                </table-component>
-            </div>
-                  
-        <div id="sub-section-3-header-4">
-            <h3> 3.4 Concept Generation </h3>
-            <image-component tag="morphological-chart-image" source="assets/morphological-chart.png"
-          subtitle="Figure 9: Morphological chart"></image-component>
-          <p>
-            Elaboration for each of the solution principles can be found in Appendix D. More details on each of the concepts can be found in Appendix E.
-          </p>
-          </div>
-
-        <div id="sub-section-3-header-5">
-            <h3> 3.5 Concept Selection </h3>
-            <p>
-                The 3 concepts generated are then scored against the must-have design specifications outlined in Section 3.2 with 3 being the best and 1 being the worst. Justification of scores can be found in Appendix F.
-            </p>
-            <table-component subtitle="Table 5: Scoring concepts against must-have design specifications">
-                <div id="table-5"></div>
-                </table-component>
+        <div>
+            <div id="" acknowledgements">
+                <h2> Acknowledgements </h2>
                 <p>
-                Both concepts 1 and 2 achieved a total score of 11 each. Hospitals may be reluctant to adopt concept 2 as it may take up space or require reconfiguration of the operating theatre. Hence, we will first proceed with concept 1.
+                    I would like to express my gratitude to my Duke-NUS Health Innovator Programme (DHIP) teammates,
+                    Danielle Grace Yap (Duke-NUS medical student) and Amy Lee (Master of Business Administration
+                    student), for their invaluable contributions to our project. Their diverse expertise and insights,
+                    drawn from their professional backgrounds and respective coursework, have greatly enriched our work.
                 </p>
+                <p>
+                    I am also deeply appreciative of Dr. Woo Yew Lok, an orthopedic surgery consultant, and Ms. Cecelia
+                    Zhou, Vice President and General Manager of Stryker, for serving as our clinical and industry
+                    mentors. I am grateful for the time they dedicated to attending our biweekly meetings, their
+                    enthusiasm in providing timely feedback, and their generous support in offering connections and
+                    assistance.
+                </p>
+                <p>
+                    Additionally, I would like to extend my thanks to the DHIP teaching faculty, including Dr. Rena
+                    Dharmawan (programme director), Dr. Bipin Bhola (curriculum lead and clinical discovery), Mr. Hugh
+                    Mason (communication), Dr. Mark Chong (design), Mr. Dennis Ong (design), Mr. Alok Mishra (commercial
+                    discovery), Dr. Agnes Xue (design), and Dr. Rama Sethuraman (regulatory), as well as the Duke-NUS
+                    Centre for Technology and Development (CTeD) team for their guidance on intellectual property.
+                </p>
+                <p>
+                    Finally, I would like to thank my DHIP classmates for their active participation in class
+                    discussions, with special appreciation for my fellow engineering fellows, Chan Syn-I, Julian Tan,
+                    and Lakshmi Sujeesh.
+                </p>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <sl-divider></sl-divider>
+        <div>
+
+            <!-- This is an example of what a section might look like -->
+            <div id="section-header-1">
+                <h2> 1. Introduction </h2>
+                <p>
+                    Orthopedic surgeries often require intermittent use of pulsed fluoroscopy (Fig 1)—real-time X-ray
+                    imaging—at various points throughout the procedure. Such procedures include hip fracture, knee
+                    replacement, minimally invasive surgeries, and hand surgeries [1]. This imaging involves taking
+                    numerous radiation "shots" or pulses, typically around a hundred in a single surgery, though the
+                    exact number depends on the surgeon’s expertise; more experienced surgeons may require fewer images
+                    [1]. Prolonged exposure to such radiation over years can increase the risk of thyroid cancer, making
+                    protective measures essential. For instance, using a thyroid shield can reduce effective radiation
+                    dose by approximately 2.5 times and overall exposure by nearly 50% [2].
+                </p>
+                <p>
+                    During fluoroscopy, the surgical team members—including the surgeon, radiologic technician, surgical
+                    assistant, and scrub nurse—wear personal protective equipment (PPE) like thyroid shields (Fig 2) and
+                    lead gowns (typically 0.5 mm thick, fully wrapped as seen in Fig 3) to minimize exposure. Other team
+                    members, such as the circulating nurse and anaesthesiologist, usually stay behind a lead shield (Fig
+                    4) when imaging is active. The layout of personnel around the operating table is often arranged to
+                    optimize both access and protection, as shown in Fig 5.
+                </p>
+                <p> Lead gowns are composed of three layers: </p>
+                <p> 1. Interior lining (canvas): A soft material providing comfort as it is the layer closest to the
+                    user's body. </p>
+                <p> 2. Radiation protective material (lead): The core layer responsible for shielding the user from
+                    radiation. </p>
+                <p> 3. Exterior material (vinyl or nylon): The outermost, durable, and water-resistant layer that
+                    protects the radiation shielding material from damage and wear [1]. </p>
+                <p>
+                    Lead gowns are highly effective, blocking 90-95% of scattered radiation [3]. However, they are quite
+                    heavy, ranging from 2 to 7 kilograms [4], and wearing them for extended periods can lead to fatigue
+                    and musculoskeletal strain [5]. This project, therefore, seeks to improve the usability and comfort
+                    of lead aprons to reduce these physical burdens while maintaining their protective function.
+                </p>
+                <image-component tag="c-arm-image" source="assets/c-arm.jpg"
+                    subtitle="Figure 1: C-arm fluoroscopy machine [6]"></image-component>
+                <image-component tag="thyroid-shield-image" source="assets/thyroid-shield.png"
+                    subtitle="Figure 2: Thyroid shield [7]"></image-component>
+                <image-component tag="current-lead-gown-image" source="assets/current-lead-gown.png"
+                    subtitle="Figure 3: Full wrap lead gown currently used in Singapore hospitals [8]"></image-component>
+                <image-component tag="lead-shield-image" source="assets/lead-shield.jpg"
+                    subtitle="Figure 4: Mobile x-ray protective screen [9]"></image-component>
+                <image-component tag="surgical-layout-image" source="assets/surgical-team-layout.png"
+                    subtitle="Figure 5: Layout of orthopaedic surgical team for a knee replacement (RT: Radiologist technician; SA: Scrub assistant; CN: Circulating nurse [moves around, no standard position]; A: Anaesthesiologist; S: Surgeon; SN: Scrub nurse) {Black: wears lead aprons; Blue: stays behind lead shield}"></image-component>
+            </div>
+        </div>
+
+
+        <br />
+        <br />
+        <sl-divider></sl-divider>
+        <div>
+            <div id="section-header-2">
+                <h2> 2. Problem Clarification </h2>
+
+                <div id="sub-section-2-header-1">
+                    <h3> 2.1 Key Insights </h3>
+                    <table-component
+                        subtitle="Table 1: Insights from primary research with healthcare professionals (see more in Appendix B) [10]">
+                        <div id="table-1"></div>
+                    </table-component>
+                    <p>
+                        Our primary research with healthcare professionals (HCP) highlighted critical issues regarding
+                        weight, hygiene, and mobility in current radiation PPE. Below is a breakdown of each category
+                        based on practitioners' feedback:
+                    </p>
+                    <p>
+                        Weight: The heavy lead aprons, often weighing up to 7kg, create significant physical strain on
+                        practitioners, leading to muscle fatigue and back pain.
+                    </p>
+                    <p>
+                        Hygiene: Shared lead aprons bring about hygiene concerns, as practitioners are uncertain about
+                        how often these are cleaned. Due to the intense physical activity involved, wearing aprons
+                        underneath scrubs leads to excessive sweating, which raises discomfort levels. Practitioners
+                        indicated that cleaning these aprons between uses isn't always feasible, adding to the hygiene
+                        issue.
+                    </p>
+                    <p>
+                        Mobility: The bulkiness and weight of the PPE restrict practitioners' movement, making it
+                        challenging to perform certain procedures.
+                    </p>
+                    <p>
+                        Among the issues identified, the weight of lead aprons emerged as a top concern, significantly
+                        impacting comfort and safety during prolonged procedures. Notably, 100% of interviewees from the
+                        orthopaedics department cited the weight of the aprons as an issue (Fig. 6).
+                    </p>
+                    <image-component tag="weight-pie-chart-image" source="assets/weight-pie-chart.png"
+                        subtitle="Figure 6: 100% of orthopaedics interviewees reported concerns regarding the weight of lead aprons [10]"></image-component>
                 </div>
-      </div>
-      </div>
-      
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-      <div id="section-header-4">
-        <h2> 4. Concept: "LatticeGuard Pro" </h2>
-        <p>
-            The "LatticeGuard Pro" is an advanced protective gown that combines material optimization with cutting-edge design to balance radiation shielding, durability, and user comfort. At its core is a 3D lattice structure, crafted from high-density lightweight alloys, which offers significant weight reduction while maintaining exceptional structural strength and flexibility.
-        </p>
 
-        <div id="sub-section-4-header-1">
-            <h3> 4.1 Key Features </h3>
-            <p>
-                1. 3D Lattice Framework:
-            </p>
-            <ul>
-                <li>
-                    Weight Reduction: The lattice design employs a network of geometric patterns (e.g., hexagonal, grid, or triangular) to distribute material only where needed, reducing bulk and enhancing flexibility.
-                </li>
-                <li>
-                    High Strength-to-Weight Ratio: The framework provides a strong yet lightweight base, making the gown easier to wear for extended periods.
-                </li>
-                <li>
-                    Reinforced Points: Critical load-bearing areas, such as the shoulders and spine, are strengthened to prevent deformation and sagging under prolonged use.
-                </li>
-            </ul>
-            <p>
-                2. Radiation Shielding:
-            </p>
-            <ul>
-                <li>
-                    The lattice structure is paired with lead-based infill material, such as sheeting or compressed granules, strategically placed within the lattice's openings. This hybrid construction ensures effective radiation protection while keeping the gown lightweight.
-                </li>
-                <li>
-                    Layered Depth: For enhanced shielding, a triangular lattice design with multi-layered depth may be used, optimizing impact resistance and stability.
-                </li>
-            </ul>
-            <p>
-                3. Comfort and Mobility:
-            </p>
-            <ul>
-                <li>
-                    Elastic Panels: Flexible fabric inserts enhance freedom of movement, allowing users to perform complex tasks without restriction.
-                </li>
-                <li>
-                    Weight Distribution: A load-bearing belt and cross-body strap system reduce strain by evenly distributing weight, minimizing fatigue during extended use.
-                </li>
-                <li>
-                    Ventilation and Padding: The inner lining features pressure-relieving foam for comfort and mesh ventilation panels to promote airflow and temperature regulation.Reinforced Points: Critical load-bearing areas, such as the shoulders and spine, are strengthened to prevent deformation and sagging under prolonged use.
-                </li>
-            </ul>
-            <p>
-                4. User Convenience:
-            </p>
-            <ul>
-                <li>
-                    Customizable Fit: Adjustable straps and closures, along with Velcro strips, allow quick detachment and a tailored fit.
-                </li>
-                <li>
-                    Breathability: The lattice's inherent gaps improve air circulation, reducing overheating and enhancing wearability.
-                </li>
-            </ul>
+                <div id="sub-section-2-header-2">
+                    <h3> 2.2 Problem Statement </h3>
+                    <p>
+                        The weight of the lead apron worn by orthopaedic surgical teams during fluoroscopy-guided
+                        surgeries causes significant fatigue, compromising their well-being and quality of life. This
+                        physical strain also limits the number of surgeries they can perform each week, impacting both
+                        healthcare delivery and practitioner health.
+                    </p>
+                </div>
+
+                <div id="sub-section-2-header-3">
+                    <h3> 2.3 Existing Solutions </h3>
+
+                    <div id="sub-section-2-header-3-1">
+                        <h4> 2.3.1 Xenolite Gowns </h4>
+                        <p>
+                            Xenolite gowns provide lead-free, lightweight, and flexible x-ray protection by using a
+                            carefully balanced mix of antimony and tungsten as shielding elements. This combination is
+                            designed to optimize weight while maximizing protection within the diagnostic imaging range
+                            of 80–100 kV. Antimony primarily attenuates lower-energy photons (below 88 keV), while
+                            tungsten, a heavier element, is effective against higher-energy radiation (above 69 keV).
+                            The powdered antimony and tungsten particles are uniformly embedded in a durable yet
+                            flexible Dow elastomer matrix, developed by Dow-DuPont for applications requiring resilience
+                            and flexibility, like running shoes and cables. This elastomer was chosen for its balance of
+                            strength and flexibility, enhancing the apron’s durability and resistance to cracking.
+                            Furthermore, the material is environmentally friendly as it is not cross-linked, meaning it
+                            can be recycled or safely disposed of as non-hazardous waste [11]. However, Xenolite
+                            provides a lead equivalency of 0.5 mm at 80 keV but may offer less protection at higher
+                            energy levels (e.g., 100 keV as seen in Table 2), where advanced imaging equipment is often
+                            used [5].
+                        </p>
+                        <table-component
+                            subtitle="Table 2: Comparison of transmission rates and densities of 0.50 mm Xenolite and 0.50 mm Lead aprons">
+                            <div id="table-2"></div>
+                        </table-component>
+                        <image-component tag="xenolite-gown-image" source="assets/xenolite-gown.jpg"
+                            subtitle="Figure 7: Xenolite Wrap-around Gown [13]"></image-component>
+                    </div>
+
+                    <div id="sub-section-2-header-3-2">
+                        <h4> 2.3.2 Suspended Radiation Protection System (Zero-Gravity) </h4>
+                        <p>
+                            Zero-Gravity is a weightless support system that uses a suspended, 1.0 mm lead shield,
+                            magnetically attached to a vest worn by the operator. This design allows the system to move
+                            smoothly with the user and be easily retracted when not in use. Available in various
+                            configurations—such as floor unit, monorail, and hinged swing-arm versions—Zero-Gravity can
+                            adapt to different room layouts and procedure requirements. By eliminating the need for
+                            heavy protective gear, it minimizes the risk of orthopaedic strain for clinicians, enhancing
+                            comfort without compromising radiation protection [14]. Although Zero-Gravity allows some
+                            movement, it restricts certain actions like bending and can limit mobility, especially when
+                            walking [1].
+                        </p>
+                        <image-component tag="zero-gravity-image" source="assets/zero-gravity.png"
+                            subtitle="Figure 8: (A) Suspended Radiation Protection System (Zero-Gravity); (B) Floor Unit; (C) Monorail; (D) Hinged Swing Arm; (E) Monorail Hinged Swing Arm [14]"></image-component>
+                    </div>
+                </div>
             </div>
-
-        <div id="sub-section-4-header-2">
-            <h3>4.2 Benefits of a 3D Lattice Structure</h3>
-            <ol>
-                <li>
-                    <p><strong>Efficient Material Use:</strong></p>
-                    <ul>
-                        <li>Reduces unnecessary bulk by targeting high-stress areas for reinforcement while maintaining lightweight low-stress zones.</li>
-                    </ul>
-                </li>
-                <li>
-                    <p><strong>Flexibility and Comfort:</strong></p>
-                    <ul>
-                        <li>Enhances wearability by conforming to body movements and evenly distributing pressure.</li>
-                        <li>Improves user satisfaction by mitigating discomfort and strain associated with traditional lead aprons.</li>
-                    </ul>
-                    </li>
-                    <li>
-                        <p><strong>Durability:</strong></p>
-                        <ul>
-                            <li>Reinforced lattice points add structural integrity, ensuring the gown lasts at least five years with regular use.</li>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
-
-        </div>
         </div>
 
+        <br />
+        <br />
+        <sl-divider></sl-divider>
+        <div>
+            <div id="section-header-3">
+                <h2> 3. Product Design </h2>
 
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-        <div id="section-header-5">
-            <h2> 5. Prototyping and Testing </h2>  
+                <div id="sub-section-3-header-1">
+                    <h3> 3.1 Value Proposition </h3>
+                    <p>
+                        Our product, ShieldX, improves comfort and reduces fatigue specifically associated with the
+                        weight of radiation PPE (lead gowns) for orthopaedic surgical teams in Singapore. By enhancing
+                        weight distribution and decreasing perceived heaviness, ShieldX enables greater mobility and
+                        freedom of movement during complex procedures. ShieldX aims to increase user satisfaction
+                        regarding the weight aspect of PPE from 0% to 60% by April 2025, all while maintaining current
+                        radiation protection standards.
+                    </p>
+                </div>
+
+                <div id="sub-section-3-header-2">
+                    <h3> 3.2 Design Specifications </h3>
+                    <table-component subtitle="Table 3: Must-have Design Specifications [1]">
+                        <div id="table-3"></div>
+                    </table-component>
+                    <p>
+                        Additional design specifications are provided in Appendix C.
+                    </p>
+                </div>
+
+                <div id="sub-section-3-header-3">
+                    <h3> 3.3 Functional Requirements </h3>
+                    <table-component
+                        subtitle="Table 4: Functional Requirements listed from most to least important [1]">
+                        <div id="table-4"></div>
+                    </table-component>
+                </div>
+
+                <div id="sub-section-3-header-4">
+                    <h3> 3.4 Concept Generation </h3>
+                    <image-component tag="morphological-chart-image" source="assets/morphological-chart.png"
+                        subtitle="Figure 9: Morphological chart"></image-component>
+                    <p>
+                        Elaboration for each of the solution principles can be found in Appendix D. More details on each
+                        of the concepts can be found in Appendix E.
+                    </p>
+                </div>
+
+                <div id="sub-section-3-header-5">
+                    <h3> 3.5 Concept Selection </h3>
+                    <p>
+                        The 3 concepts generated are then scored against the must-have design specifications outlined in
+                        Section 3.2 with 3 being the best and 1 being the worst. Justification of scores can be found in
+                        Appendix F.
+                    </p>
+                    <table-component subtitle="Table 5: Scoring concepts against must-have design specifications">
+                        <div id="table-5"></div>
+                    </table-component>
+                    <p>
+                        Both concepts 1 and 2 achieved a total score of 11 each. Hospitals may be reluctant to adopt
+                        concept 2 as it may take up space or require reconfiguration of the operating theatre. Hence, we
+                        will first proceed with concept 1.
+                    </p>
+                </div>
             </div>
-            </div>  
-            
+        </div>
 
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-        <div id="section-header-6">
-            <h2> 6. Future Work </h2>  
+        <br />
+        <br />
+        <sl-divider></sl-divider>
+        <div>
+            <div id="section-header-4">
+                <h2> 4. Concept: "LatticeGuard Pro" </h2>
+                <p>
+                    The "LatticeGuard Pro" is an advanced protective gown that combines material optimization with
+                    cutting-edge design to balance radiation shielding, durability, and user comfort. At its core is a
+                    3D lattice structure, crafted from high-density lightweight alloys, which offers significant weight
+                    reduction while maintaining exceptional structural strength and flexibility.
+                </p>
+
+                <!-- Section 4.1 Key Features -->
+                <div id="sub-section-4-header-1">
+                    <h3>4.1 Key Features</h3>
+                    <ol>
+                        <li>
+                            <p><strong>3D Lattice Framework:</strong></p>
+                            <ul>
+                                <li><strong>Weight Reduction:</strong> The lattice design employs a network of geometric
+                                    patterns (e.g., hexagonal, grid, or triangular) to distribute material only where
+                                    needed, reducing bulk and enhancing flexibility.</li>
+                                <li><strong>High Strength-to-Weight Ratio:</strong> The framework provides a strong yet
+                                    lightweight base, making the gown easier to wear for extended periods.</li>
+                                <li><strong>Reinforced Points:</strong> Critical load-bearing areas, such as the
+                                    shoulders and spine, are strengthened to prevent deformation and sagging under
+                                    prolonged use.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Radiation Shielding:</strong></p>
+                            <ul>
+                                <li>The lattice structure is paired with lead-based infill material, such as sheeting or
+                                    compressed granules, strategically placed within the lattice's openings. This hybrid
+                                    construction ensures effective radiation protection while keeping the gown
+                                    lightweight.</li>
+                                <li><strong>Layered Depth:</strong> For enhanced shielding, a triangular lattice design
+                                    with multi-layered depth may be used, optimizing impact resistance and stability.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Comfort and Mobility:</strong></p>
+                            <ul>
+                                <li><strong>Elastic Panels:</strong> Flexible fabric inserts enhance freedom of
+                                    movement, allowing users to perform complex tasks without restriction.</li>
+                                <li><strong>Weight Distribution:</strong> A load-bearing belt and cross-body strap
+                                    system reduce strain by evenly distributing weight, minimizing fatigue during
+                                    extended use.</li>
+                                <li><strong>Ventilation and Padding:</strong> The inner lining features
+                                    pressure-relieving foam for comfort and mesh ventilation panels to promote airflow
+                                    and temperature regulation.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>User Convenience:</strong></p>
+                            <ul>
+                                <li><strong>Customizable Fit:</strong> Adjustable straps and closures, along with Velcro
+                                    strips, allow quick detachment and a tailored fit.</li>
+                                <li><strong>Breathability:</strong> The lattice's inherent gaps improve air circulation,
+                                    reducing overheating and enhancing wearability.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Section 4.2 Benefits of a 3D Lattice Structure -->
+                <div id="sub-section-4-header-2">
+                    <h3>4.2 Benefits of a 3D Lattice Structure</h3>
+                    <ol>
+                        <li>
+                            <p><strong>Efficient Material Use:</strong></p>
+                            <ul>
+                                <li>Reduces unnecessary bulk by targeting high-stress areas for reinforcement while
+                                    maintaining lightweight low-stress zones.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Flexibility and Comfort:</strong></p>
+                            <ul>
+                                <li>Enhances wearability by conforming to body movements and evenly distributing
+                                    pressure.</li>
+                                <li>Improves user satisfaction by mitigating discomfort and strain associated with
+                                    traditional lead aprons.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Durability:</strong></p>
+                            <ul>
+                                <li>Reinforced lattice points add structural integrity, ensuring the gown lasts at least
+                                    five years with regular use.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+
             </div>
-            </div> 
-
-    <!-- This is an example of how you can use the references component to create references -->
-    <div id="references" class="references">
-      <sl-divider></sl-divider>
-      <h2>References</h2>
-      <ul>
-        <li>
-          Brody, J. E. (2007, December 11). Mental reserves keep brain agile. The New York Times. Retrieved from
-          http://www.dowjones.com/factiva/
-        </li>
-        <li>
-          Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008, May). Enhancing worker well-being: Occupational
-          health psychologists convene to share their research on work, stress, and health. Monitor on Psychology,
-          39(5), 26-29.
-        </li>
-        <li>
-          Jones, T. J., & Fields, N. (2003). Emotional quotient and personality. E-Journal of Applied Psychology, 2(2),
-          38-45. Retrieved from http://ejournalappliedpsyc/index.php/ejap
-        </li>
-      </ul>
-    </div>
+        </div>
 
 
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-        <div id="appendix-a">
-            <h2> Appendix A: Biweekly Meetings with Clinical Mentor </h2>  
+        <br />
+        <br />
+        <sl-divider></sl-divider>
+        <div>
+            <div id="section-header-5">
+                <h2> 5. Prototyping and Testing </h2>
             </div>
-            </div> 
-    
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-        <div id="appendix-b">
-            <h2> Appendix B: Primary Research with Healthcare Professionals </h2>  
+        </div>
+
+
+        <br />
+        <br />
+        <sl-divider></sl-divider>
+        <div>
+            <div id="section-header-6">
+                <h2> 6. Future Work </h2>
             </div>
-            </div> 
-    
-    
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-        <div id="appendix-c">
-            <h2> Appendix C: Good-to-have Design Specifications [1] </h2>  
-            <table-component subtitle="Good-to-have Design Specifications">
-                <div id="table-c"></div>
+        </div>
+
+        <!-- This is an example of how you can use the references component to create references -->
+        <div id="references" class="references">
+            <sl-divider></sl-divider>
+            <h2>References</h2>
+            <ul>
+                <li>
+                    Brody, J. E. (2007, December 11). Mental reserves keep brain agile. The New York Times. Retrieved
+                    from
+                    http://www.dowjones.com/factiva/
+                </li>
+                <li>
+                    Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008, May). Enhancing worker well-being:
+                    Occupational
+                    health psychologists convene to share their research on work, stress, and health. Monitor on
+                    Psychology,
+                    39(5), 26-29.
+                </li>
+                <li>
+                    Jones, T. J., & Fields, N. (2003). Emotional quotient and personality. E-Journal of Applied
+                    Psychology, 2(2),
+                    38-45. Retrieved from http://ejournalappliedpsyc/index.php/ejap
+                </li>
+            </ul>
+        </div>
+
+
+        <br />
+        <br />
+        <sl-divider></sl-divider>
+        <div>
+            <div id="appendix-a">
+                <h2> Appendix A: Biweekly Meetings with Clinical Mentor </h2>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <sl-divider></sl-divider>
+        <div>
+            <div id="appendix-b">
+                <h2> Appendix B: Primary Research with Healthcare Professionals </h2>
+            </div>
+        </div>
+
+
+        <br />
+        <br />
+        <sl-divider></sl-divider>
+        <div>
+            <div id="appendix-c">
+                <h2> Appendix C: Good-to-have Design Specifications [1] </h2>
+                <table-component subtitle="Good-to-have Design Specifications">
+                    <div id="table-c"></div>
                 </table-component>
             </div>
-            </div> 
+        </div>
 
 
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-        <div id="appendix-d">
-            <h2> Appendix D: Functional Requirements in Detail </h2>  
-            <p>
-                1. Radiation Protection
-            </p>
-            <p>
-                Material Optimization: Develop a composite material that combines lead-free elements (like antimony and tungsten) that can achieve equivalent attenuation to 0.50 mm lead, focusing on optimal thickness and density.
-            </p>
-            <p>
-                Layered Shielding Design: Use a multi-layered structure where different layers focus on absorbing specific radiation energy ranges, maximizing overall protection while maintaining flexibility.
-            </p>
-            <p>
-                Radiation-Specific Fabric Coating: Apply a specialized radiation-absorbing coating on the gown’s outer surface, which would enhance protection levels without adding significant weight.
-            </p>
-            <br />
-            <p>
-                2. Weight Reduction
-            </p>
-            <p>
-                High-Density, Lightweight Alloys: Incorporate high-density alloys or metal foams that provide necessary radiation shielding with reduced mass compared to traditional lead.
-            </p>
-            <p>
-                Nanotechnology Integration: Use nanoparticles within the shielding material to reduce the weight while maintaining attenuation levels, particularly through the selective blocking of radiation frequencies.
-            </p>
-            <p>
-                Advanced Polymer Composites: Develop composite materials using polymer matrices that are reinforced with lightweight, radiation-attenuating fillers to balance weight and protection.
-            </p>
-            <br />
-            <p>
-                3. Ease of Movement
-            </p>
-            <p>
-                Elastic Fabric Panels: Include flexible fabric sections at major joints (shoulders, hips) to allow a full range of motion without hindering protection.
-            </p>
-            <p>
-                Articulated Design with Stretch Zones: Use an articulated design with stretchable zones that align with the body's natural movement areas to prevent restrictions.
-            </p>
-            <p>
-                Modular Panel System: Create a modular gown structure with detachable and adjustable panels at key areas, allowing customizations based on mobility needs during different procedures.
-            </p>
-            <br />
-            <p>
-                4. Weight Support
-            </p>
-            <p>
-                Shoulder Harness or Suspension System: Attach an adjustable shoulder harness or strap system to distribute weight away from the lower back and shoulders.
-            </p>
-            <p>
-                Load-Bearing Belt: Integrate a supportive belt around the waist to transfer some of the weight onto the hips, alleviating shoulder strain.
-            </p>
-            <p>
-                External Support Attachment: Consider options to attach the gown to an external support frame or rail, reducing the direct weight on the body during long procedures.
-            </p>
-            <br />
-            <p>
-                5. Weight Distribution System
-            </p>
-            <p>
-                Built-In Shoulder and Waist Padding: Use ergonomically shaped padding at the shoulders and waist to help distribute weight evenly and reduce strain points.
-            </p>
-            <p>
-                Cross-Body Strap Configuration: Incorporate cross-body straps that shift weight diagonally, balancing load across the torso instead of concentrating it on one area.
-            </p>
-            <p>
-                Contoured Gown Design: Shape the gown to follow natural body contours, allowing even distribution and minimizing pressure on high-stress areas.
-            </p>
-            <br />
-            <p>
-                6. Quick-Release Mechanism
-            </p>
-            <p>
-                Magnetic Quick-Release Fasteners: Use magnetic closures that can be easily disengaged with a single pull, allowing for fast removal without compromising security during wear.
-            </p>
-            <p>
-                Velcro Strips for Rapid Detachment: Integrate strategically placed Velcro strips for easy gown removal in emergency situations.
-            </p>
-            <p>
-                Press-Button Release Clips: Install press-button clips at the shoulders or waist for swift detachment when needed.
-            </p>
-            <br />
-            <p>
-                7. Ergonomic Design for Long Wear Duration
-            </p>
-            <p>
-                Pressure-Relieving Foam Padding: Place memory foam padding in high-stress areas to provide additional comfort during extended use.
-            </p>
-            <p>
-                Adjustable Shoulder Pads: Allow users to adjust shoulder padding thickness to customize comfort according to their individual needs.
-            </p>
-            <p>
-                Neck Cushioning Inserts: Integrate soft neck inserts to reduce discomfort around the neck, a common pressure point during long procedures.
-            </p>
-            <br />
-            <p>
-                8. Sweat Absorption and Comfort
-            </p>
-            <p>
-                Moisture-Wicking Inner Lining: Use a breathable, moisture-wicking fabric on the interior to absorb sweat and keep the wearer dry.
-            </p>
-            <p>
-                Antimicrobial Treatment: Apply an antimicrobial coating to the inner fabric to prevent odor and bacteria buildup due to prolonged wear.
-            </p>
-            <p>
-                Ventilated Fabric Structure: Use a fabric structure with microscopic air channels to enhance breathability and reduce moisture retention.
-            </p>
-            <br />
-            <p>
-                9. Ventilation
-            </p>
-            <p>
-                Mesh Ventilation Panels: Add mesh or perforated panels in areas prone to heat buildup (back, underarms) to improve airflow.
-            </p>
-            <p>
-                Active Cooling System: Integrate a small, battery-operated fan or cooling pack within the gown for active air circulation in heat-prone zones.
-            </p>
-            <p>
-                Breathable Layering: Design the gown with an inner layer that allows airflow while maintaining radiation protection in the outer layer.
-            </p>
-            <br />
-            <p>
-                10. Size and Fit Adjustment
-            </p>
-            <p>
-                Adjustable Straps and Closures: Include easily adjustable straps and closures to allow customization for different body types.
-            </p>
-            <p>
-                Elasticized Waist and Side Panels: Use elasticized sections along the waist and sides for a snug, adaptable fit that moves with the wearer.
-            </p>
-            <p>
-                Customizable Velcro Panels: Implement Velcro panels that can be adjusted based on the user’s size and comfort preferences.
-            </p>
+        <br />
+        <br />
+        <sl-divider></sl-divider>
+        <div>
+            <div id="appendix-d">
+                <h2> Appendix D: Functional Requirements in Detail </h2>
+                <p>
+                    1. Radiation Protection
+                </p>
+                <p>
+                    Material Optimization: Develop a composite material that combines lead-free elements (like antimony
+                    and tungsten) that can achieve equivalent attenuation to 0.50 mm lead, focusing on optimal thickness
+                    and density.
+                </p>
+                <p>
+                    Layered Shielding Design: Use a multi-layered structure where different layers focus on absorbing
+                    specific radiation energy ranges, maximizing overall protection while maintaining flexibility.
+                </p>
+                <p>
+                    Radiation-Specific Fabric Coating: Apply a specialized radiation-absorbing coating on the gown’s
+                    outer surface, which would enhance protection levels without adding significant weight.
+                </p>
+                <br />
+                <p>
+                    2. Weight Reduction
+                </p>
+                <p>
+                    High-Density, Lightweight Alloys: Incorporate high-density alloys or metal foams that provide
+                    necessary radiation shielding with reduced mass compared to traditional lead.
+                </p>
+                <p>
+                    Nanotechnology Integration: Use nanoparticles within the shielding material to reduce the weight
+                    while maintaining attenuation levels, particularly through the selective blocking of radiation
+                    frequencies.
+                </p>
+                <p>
+                    Advanced Polymer Composites: Develop composite materials using polymer matrices that are reinforced
+                    with lightweight, radiation-attenuating fillers to balance weight and protection.
+                </p>
+                <br />
+                <p>
+                    3. Ease of Movement
+                </p>
+                <p>
+                    Elastic Fabric Panels: Include flexible fabric sections at major joints (shoulders, hips) to allow a
+                    full range of motion without hindering protection.
+                </p>
+                <p>
+                    Articulated Design with Stretch Zones: Use an articulated design with stretchable zones that align
+                    with the body's natural movement areas to prevent restrictions.
+                </p>
+                <p>
+                    Modular Panel System: Create a modular gown structure with detachable and adjustable panels at key
+                    areas, allowing customizations based on mobility needs during different procedures.
+                </p>
+                <br />
+                <p>
+                    4. Weight Support
+                </p>
+                <p>
+                    Shoulder Harness or Suspension System: Attach an adjustable shoulder harness or strap system to
+                    distribute weight away from the lower back and shoulders.
+                </p>
+                <p>
+                    Load-Bearing Belt: Integrate a supportive belt around the waist to transfer some of the weight onto
+                    the hips, alleviating shoulder strain.
+                </p>
+                <p>
+                    External Support Attachment: Consider options to attach the gown to an external support frame or
+                    rail, reducing the direct weight on the body during long procedures.
+                </p>
+                <br />
+                <p>
+                    5. Weight Distribution System
+                </p>
+                <p>
+                    Built-In Shoulder and Waist Padding: Use ergonomically shaped padding at the shoulders and waist to
+                    help distribute weight evenly and reduce strain points.
+                </p>
+                <p>
+                    Cross-Body Strap Configuration: Incorporate cross-body straps that shift weight diagonally,
+                    balancing load across the torso instead of concentrating it on one area.
+                </p>
+                <p>
+                    Contoured Gown Design: Shape the gown to follow natural body contours, allowing even distribution
+                    and minimizing pressure on high-stress areas.
+                </p>
+                <br />
+                <p>
+                    6. Quick-Release Mechanism
+                </p>
+                <p>
+                    Magnetic Quick-Release Fasteners: Use magnetic closures that can be easily disengaged with a single
+                    pull, allowing for fast removal without compromising security during wear.
+                </p>
+                <p>
+                    Velcro Strips for Rapid Detachment: Integrate strategically placed Velcro strips for easy gown
+                    removal in emergency situations.
+                </p>
+                <p>
+                    Press-Button Release Clips: Install press-button clips at the shoulders or waist for swift
+                    detachment when needed.
+                </p>
+                <br />
+                <p>
+                    7. Ergonomic Design for Long Wear Duration
+                </p>
+                <p>
+                    Pressure-Relieving Foam Padding: Place memory foam padding in high-stress areas to provide
+                    additional comfort during extended use.
+                </p>
+                <p>
+                    Adjustable Shoulder Pads: Allow users to adjust shoulder padding thickness to customize comfort
+                    according to their individual needs.
+                </p>
+                <p>
+                    Neck Cushioning Inserts: Integrate soft neck inserts to reduce discomfort around the neck, a common
+                    pressure point during long procedures.
+                </p>
+                <br />
+                <p>
+                    8. Sweat Absorption and Comfort
+                </p>
+                <p>
+                    Moisture-Wicking Inner Lining: Use a breathable, moisture-wicking fabric on the interior to absorb
+                    sweat and keep the wearer dry.
+                </p>
+                <p>
+                    Antimicrobial Treatment: Apply an antimicrobial coating to the inner fabric to prevent odor and
+                    bacteria buildup due to prolonged wear.
+                </p>
+                <p>
+                    Ventilated Fabric Structure: Use a fabric structure with microscopic air channels to enhance
+                    breathability and reduce moisture retention.
+                </p>
+                <br />
+                <p>
+                    9. Ventilation
+                </p>
+                <p>
+                    Mesh Ventilation Panels: Add mesh or perforated panels in areas prone to heat buildup (back,
+                    underarms) to improve airflow.
+                </p>
+                <p>
+                    Active Cooling System: Integrate a small, battery-operated fan or cooling pack within the gown for
+                    active air circulation in heat-prone zones.
+                </p>
+                <p>
+                    Breathable Layering: Design the gown with an inner layer that allows airflow while maintaining
+                    radiation protection in the outer layer.
+                </p>
+                <br />
+                <p>
+                    10. Size and Fit Adjustment
+                </p>
+                <p>
+                    Adjustable Straps and Closures: Include easily adjustable straps and closures to allow customization
+                    for different body types.
+                </p>
+                <p>
+                    Elasticized Waist and Side Panels: Use elasticized sections along the waist and sides for a snug,
+                    adaptable fit that moves with the wearer.
+                </p>
+                <p>
+                    Customizable Velcro Panels: Implement Velcro panels that can be adjusted based on the user’s size
+                    and comfort preferences.
+                </p>
             </div>
-            </div> 
+        </div>
 
 
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-        <div id="appendix-e">
-            <h2> Appendix E: Concepts Generated in Detail </h2>  
-            <p>
-                Concept 2 "SuspendShield Flex": The suspended radiation protective system emphasizes user comfort and safety through its sophisticated design approach. Material optimization with high-density lightweight alloys forms the foundation, while elastic fabric panels provide necessary flexibility. The core support system consists of a shoulder harness or suspension system, engineered to distribute weight effectively. Quick accessibility is achieved through magnetic quick-release fasteners, while neck cushioning inserts enhance comfort during extended wear. The system incorporates advanced comfort features including an antimicrobial treatment to maintain hygiene and an active cooling system to regulate temperature, making it particularly suitable for extended periods of use.
-            </p>
-            <p>
-                Concept 3 "NanoTech ArtiFit": This protective suit concept represents a technological advancement in radiation protection through its layered shielding design and nanotechnology integration. The suit features an articulated design with strategic stretch zones, allowing for natural movement while maintaining protection. The external support attachment system works in conjunction with the contoured gown design to optimize weight distribution. Accessibility is enhanced through press-button release clips, while comfort is prioritized with adjustable shoulder pads. The ventilated fabric structure and breathable layering system ensure optimal temperature regulation. The addition of customizable Velcro panels allows for personalized adjustments, making this suit adaptable to various user preferences and requirements.
-            </p>
+        <br />
+        <br />
+        <sl-divider></sl-divider>
+        <div>
+            <div id="appendix-e">
+                <h2> Appendix E: Concepts Generated in Detail </h2>
+                <p>
+                    Concept 2 "SuspendShield Flex": The suspended radiation protective system emphasizes user comfort
+                    and safety through its sophisticated design approach. Material optimization with high-density
+                    lightweight alloys forms the foundation, while elastic fabric panels provide necessary flexibility.
+                    The core support system consists of a shoulder harness or suspension system, engineered to
+                    distribute weight effectively. Quick accessibility is achieved through magnetic quick-release
+                    fasteners, while neck cushioning inserts enhance comfort during extended wear. The system
+                    incorporates advanced comfort features including an antimicrobial treatment to maintain hygiene and
+                    an active cooling system to regulate temperature, making it particularly suitable for extended
+                    periods of use.
+                </p>
+                <p>
+                    Concept 3 "NanoTech ArtiFit": This protective suit concept represents a technological advancement in
+                    radiation protection through its layered shielding design and nanotechnology integration. The suit
+                    features an articulated design with strategic stretch zones, allowing for natural movement while
+                    maintaining protection. The external support attachment system works in conjunction with the
+                    contoured gown design to optimize weight distribution. Accessibility is enhanced through
+                    press-button release clips, while comfort is prioritized with adjustable shoulder pads. The
+                    ventilated fabric structure and breathable layering system ensure optimal temperature regulation.
+                    The addition of customizable Velcro panels allows for personalized adjustments, making this suit
+                    adaptable to various user preferences and requirements.
+                </p>
             </div>
-            </div> 
-            
+        </div>
 
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-        <div id="appendix-f">
-            <h2> Appendix F: Justification of Concepts’ Scores </h2>  
-            <p>
-                Block at least 90% of potential radiation exposure:
-            </p>
-            <p>
-                Concept 1 (LatticeGuard Pro): 2 (Material optimization with high-density alloys)
-            </p>
-            <p>
-                Concept 2 (SuspendShield Flex): 1 (Basic material optimization)
-            </p>
-            <p>
-                Concept 3 (NanoTech ArtiFit): 3 (Layered shielding + nanotechnology integration)
-            </p>
-            <br />
-            <p>
-                Weight must not exceed 7 kg:
-            </p>
-            <p>
-                Concept 1 (LatticeGuard Pro): 2 (Lightweight alloys + lattice structure)
-            </p>
-            <p>
-                Concept 2 (SuspendShield Flex): 3 (Suspended system eliminates weight on user)
-            </p>
-            <p>
-                Concept 3 (NanoTech ArtiFit): 1 (Multiple layers could increase weight)
-            </p>
-            <br />
-            <p>
-                Allow users to bend down with ease:
-            </p>
-            <p>
-                Concept 1 (LatticeGuard Pro): 3 (Elastic panels + cross-body configuration)
-            </p>
-            <p>
-                Concept 2 (SuspendShield Flex): 1 (Elastic panels but suspended system might restrict)
-            </p>
-            <p>
-                Concept 3 (NanoTech ArtiFit): 2 (Articulated but multiple layers might limit flexibility)
-            </p>
-            <br />
-            <p>
-                Comfortable to wear for at least 4 hours:
-            </p>
-            <p>
-                Concept 1 (LatticeGuard Pro): 2 (Moisture-wicking + mesh ventilation + foam padding)
-            </p>
-            <p>
-                Concept 2 (SuspendShield Flex): 3 (Active cooling + neck cushioning + weight elimination)
-            </p>
-            <p>
-                Concept 3 (NanoTech ArtiFit): 1 (Ventilated structure but multiple layers might affect comfort)
-            </p>
-            <br />
-            <p>
-                Cost (not exceed 20% more than SG$1000):
-            </p>
-            <p>
-                Concept 1 (LatticeGuard Pro): 2 (Standard materials, complex structure)
-            </p>
-            <p>
-                Concept 2 (SuspendShield Flex): 3 (Simpler construction)
-            </p>
-            <p>
-                Concept 3 (NanoTech ArtiFit): 1 (Nanotechnology likely increases cost significantly)
-            </p>
+
+        <br />
+        <br />
+        <sl-divider></sl-divider>
+        <div>
+            <div id="appendix-f">
+                <h2> Appendix F: Justification of Concepts’ Scores </h2>
+                <p>
+                    Block at least 90% of potential radiation exposure:
+                </p>
+                <p>
+                    Concept 1 (LatticeGuard Pro): 2 (Material optimization with high-density alloys)
+                </p>
+                <p>
+                    Concept 2 (SuspendShield Flex): 1 (Basic material optimization)
+                </p>
+                <p>
+                    Concept 3 (NanoTech ArtiFit): 3 (Layered shielding + nanotechnology integration)
+                </p>
+                <br />
+                <p>
+                    Weight must not exceed 7 kg:
+                </p>
+                <p>
+                    Concept 1 (LatticeGuard Pro): 2 (Lightweight alloys + lattice structure)
+                </p>
+                <p>
+                    Concept 2 (SuspendShield Flex): 3 (Suspended system eliminates weight on user)
+                </p>
+                <p>
+                    Concept 3 (NanoTech ArtiFit): 1 (Multiple layers could increase weight)
+                </p>
+                <br />
+                <p>
+                    Allow users to bend down with ease:
+                </p>
+                <p>
+                    Concept 1 (LatticeGuard Pro): 3 (Elastic panels + cross-body configuration)
+                </p>
+                <p>
+                    Concept 2 (SuspendShield Flex): 1 (Elastic panels but suspended system might restrict)
+                </p>
+                <p>
+                    Concept 3 (NanoTech ArtiFit): 2 (Articulated but multiple layers might limit flexibility)
+                </p>
+                <br />
+                <p>
+                    Comfortable to wear for at least 4 hours:
+                </p>
+                <p>
+                    Concept 1 (LatticeGuard Pro): 2 (Moisture-wicking + mesh ventilation + foam padding)
+                </p>
+                <p>
+                    Concept 2 (SuspendShield Flex): 3 (Active cooling + neck cushioning + weight elimination)
+                </p>
+                <p>
+                    Concept 3 (NanoTech ArtiFit): 1 (Ventilated structure but multiple layers might affect comfort)
+                </p>
+                <br />
+                <p>
+                    Cost (not exceed 20% more than SG$1000):
+                </p>
+                <p>
+                    Concept 1 (LatticeGuard Pro): 2 (Standard materials, complex structure)
+                </p>
+                <p>
+                    Concept 2 (SuspendShield Flex): 3 (Simpler construction)
+                </p>
+                <p>
+                    Concept 3 (NanoTech ArtiFit): 1 (Nanotechnology likely increases cost significantly)
+                </p>
             </div>
-            </div>
+        </div>
 
-  </div>
+    </div>
 
-  <!-- This is the code to display the scroll to top button for ergonomic -->
-  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
-  <!-- but it might reduce the user experience. -->
-  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
-    <sl-icon name="arrow-up" label="Settings"></sl-icon>
-  </sl-button>
+    <!-- This is the code to display the scroll to top button for ergonomic -->
+    <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+    <!-- but it might reduce the user experience. -->
+    <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+        <sl-icon name="arrow-up" label="Settings"></sl-icon>
+    </sl-button>
 
-  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-  <script type="module" src="./components/table-component/table-component.js"></script>
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <script type="module" src="./components/table-component/table-component.js"></script>
 </body>
 
 </html>
