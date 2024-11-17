@@ -28,9 +28,12 @@
     <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
     <script src="./components/scroll-to-top/scroll-to-top.js"></script>
 
+    <!-- Include your custom table-component.js -->
     <script src="./components/table-component/table-component.js"></script>
 
+    <!-- Include Grid.js CSS and JS -->
     <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 </head>
 
 <body>
@@ -209,17 +212,14 @@
                     of lead aprons to reduce these physical burdens while maintaining their protective function.
                 </p>
                 <image-component tag="c-arm-image" source="assets/c-arm.jpg"
-                    subtitle="Figure 1: C-arm fluoroscopy machine [6]"
-                    size="small"></image-component>
+                    subtitle="Figure 1: C-arm fluoroscopy machine [6]" size="small"></image-component>
                 <image-component tag="thyroid-shield-image" source="assets/thyroid-shield.png"
-                    subtitle="Figure 2: Thyroid shield [7]"
-                    size="small"></image-component>
+                    subtitle="Figure 2: Thyroid shield [7]" size="small"></image-component>
                 <image-component tag="current-lead-gown-image" source="assets/current-lead-gown.png"
                     subtitle="Figure 3: Full wrap lead gown currently used in Singapore hospitals [8]"
                     size="small"></image-component>
                 <image-component tag="lead-shield-image" source="assets/lead-shield.jpg"
-                    subtitle="Figure 4: Mobile x-ray protective screen [9]"
-                    custom-width="100px"></image-component>
+                    subtitle="Figure 4: Mobile x-ray protective screen [9]" custom-width="100px"></image-component>
                 <image-component tag="surgical-layout-image" source="assets/surgical-team-layout.png"
                     subtitle="Figure 5: Layout of orthopaedic surgical team for a knee replacement (RT: Radiologist technician; SA: Scrub assistant; CN: Circulating nurse [moves around, no standard position]; A: Anaesthesiologist; S: Surgeon; SN: Scrub nurse) {Black: wears lead aprons; Blue: stays behind lead shield}"
                     size="large"></image-component>
@@ -236,8 +236,7 @@
 
                 <div id="sub-section-2-header-1">
                     <h3> 2.1 Key Insights </h3>
-                    <table-component
-                        subtitle="Table 1: Insights from primary research with healthcare professionals (see more in Appendix B) [10]">
+                    <table-component subtitle="Table 1: Insights from primary research with healthcare professionals">
                         <div id="table-1"></div>
                     </table-component>
                     <p>
@@ -313,8 +312,7 @@
                             <div id="table-2"></div>
                         </table-component>
                         <image-component tag="xenolite-gown-image" source="assets/xenolite-gown.jpg"
-                            subtitle="Figure 7: Xenolite Wrap-around Gown [13]"
-                            size="small"></image-component>
+                            subtitle="Figure 7: Xenolite Wrap-around Gown [13]" size="small"></image-component>
                     </div>
 
                     <div id="sub-section-2-header-3-2">
@@ -377,8 +375,7 @@
                 <div id="sub-section-3-header-4">
                     <h3> 3.4 Concept Generation </h3>
                     <image-component tag="morphological-chart-image" source="assets/morphological-chart.png"
-                        subtitle="Figure 9: Morphological chart"
-                        custom-width="800px"></image-component>
+                        subtitle="Figure 9: Morphological chart" custom-width="800px"></image-component>
                     <p>
                         Elaboration for each of the solution principles can be found in Appendix D. More details on each
                         of the concepts can be found in Appendix E.
@@ -774,8 +771,7 @@
             <div id="section-header-6">
                 <h2> 6. Future Work </h2>
                 <image-component tag="gantt-chart-image" source="assets/gantt-chart.png"
-                    subtitle="Figure 12: Project Gantt Chart"
-                    custom-width="800px"></image-component>
+                    subtitle="Figure 12: Project Gantt Chart" custom-width="800px"></image-component>
                 <p>
                     Moving forward, we will continue to refine and validate the feasibility of the LatticeGuard Pro
                     concept by collaborating with materials scientists and radiation physicists/medical physicists. This
@@ -900,11 +896,16 @@
                             <li>Objective: Validate clinical scenarios, workflows, and patient journey analyses.</li>
                             <li>Discussion Points:
                                 <ul>
-                                    <li>Procedures requiring intensive imaging include hip fractures, knee replacements, minimally invasive surgeries, and hand surgeries.</li>
-                                    <li>Use of fluoroscopy: Typically up to 100–200 radiation shots per surgery, though experienced surgeons may minimize this to 20–30 shots.</li>
-                                    <li>Brands of lead gowns used: Not identified; advised consulting nursing directors.</li>
-                                    <li>Potential solutions discussed include augmented reality systems, radiation scatter-reduction devices, and robotics.</li>
-                                    <li>Validation of augmented reality systems revealed limitations in accuracy and surgeon preference for transparency over darkened holographic lenses.</li>
+                                    <li>Procedures requiring intensive imaging include hip fractures, knee replacements,
+                                        minimally invasive surgeries, and hand surgeries.</li>
+                                    <li>Use of fluoroscopy: Typically up to 100–200 radiation shots per surgery, though
+                                        experienced surgeons may minimize this to 20–30 shots.</li>
+                                    <li>Brands of lead gowns used: Not identified; advised consulting nursing directors.
+                                    </li>
+                                    <li>Potential solutions discussed include augmented reality systems, radiation
+                                        scatter-reduction devices, and robotics.</li>
+                                    <li>Validation of augmented reality systems revealed limitations in accuracy and
+                                        surgeon preference for transparency over darkened holographic lenses.</li>
                                 </ul>
                             </li>
                         </ul>
@@ -916,9 +917,12 @@
                             <li>Objective: Finalize the commercial direction and target users.</li>
                             <li>Discussion Points:
                                 <ul>
-                                    <li>Primary focus areas for radiation PPE improvement: Hygiene, weight, and sizing.</li>
-                                    <li>Target consumers: Orthopaedic surgeon teams; customers: hospital procurement departments.</li>
-                                    <li>Recommended further validation interviews with orthopaedic teams outside the SGH cluster.</li>
+                                    <li>Primary focus areas for radiation PPE improvement: Hygiene, weight, and sizing.
+                                    </li>
+                                    <li>Target consumers: Orthopaedic surgeon teams; customers: hospital procurement
+                                        departments.</li>
+                                    <li>Recommended further validation interviews with orthopaedic teams outside the SGH
+                                        cluster.</li>
                                 </ul>
                             </li>
                         </ul>
@@ -931,17 +935,24 @@
                             <li>Objective: Refine and select the final concept for development.</li>
                             <li>Discussion Points:
                                 <ul>
-                                    <li>Weight is identified as the most critical factor to address in lead gown design.</li>
-                                    <li>Magnetic closures recommended over zippers for maintaining radiation shielding continuity.</li>
-                                    <li>Explored feasibility of lattice structures as a lead alternative; confirmed 3D printing lead is not viable.</li>
-                                    <li>Reinforced the importance of ventilation and weight distribution mechanisms.</li>
+                                    <li>Weight is identified as the most critical factor to address in lead gown design.
+                                    </li>
+                                    <li>Magnetic closures recommended over zippers for maintaining radiation shielding
+                                        continuity.</li>
+                                    <li>Explored feasibility of lattice structures as a lead alternative; confirmed 3D
+                                        printing lead is not viable.</li>
+                                    <li>Reinforced the importance of ventilation and weight distribution mechanisms.
+                                    </li>
                                 </ul>
                             </li>
                             <li>Decisions and Next Steps:
                                 <ul>
-                                    <li>Concept Selection: Lattice structures as an alternative framework for weight and shielding optimization.</li>
-                                    <li>Validation Metrics: Develop KPIs including user comfort, weight reduction efficacy, and material performance.</li>
-                                    <li>Pilot Testing: Design a small-scale usability and functionality test with available PPE provided by mentors.</li>
+                                    <li>Concept Selection: Lattice structures as an alternative framework for weight and
+                                        shielding optimization.</li>
+                                    <li>Validation Metrics: Develop KPIs including user comfort, weight reduction
+                                        efficacy, and material performance.</li>
+                                    <li>Pilot Testing: Design a small-scale usability and functionality test with
+                                        available PPE provided by mentors.</li>
                                 </ul>
                             </li>
                             <li>Immediate Actions:
@@ -967,10 +978,9 @@
                     subtitle="Specialties of HCP interviewed"></image-component>
                 <image-component tag="designation-image" source="assets/designation.png"
                     subtitle="Designations of HCP interviewed"></image-component>
-                <table-component
-                            subtitle="Table of HCP Profiles and Key Insights">
-                            <div id="table-c"></div>
-                        </table-component>
+                <table-component subtitle="Table of HCP Profiles and Key Insights">
+                    <div id="table-c"></div>
+                </table-component>
             </div>
         </div>
 
@@ -1250,29 +1260,21 @@
                         Densities and Mass Attenuation Coefficients.</li>
                 </ul>
                 <image-component tag="al-image" source="assets/al-calculation.png"
-                    subtitle="Linear attenuation calculations for Aluminium"
-                    custom-width="800px"></image-component>
+                    subtitle="Linear attenuation calculations for Aluminium" custom-width="800px"></image-component>
                 <image-component tag="bi-image" source="assets/bi-calculation.png"
-                    subtitle="Linear attenuation calculations for Bismuth"
-                    custom-width="800px"></image-component>
+                    subtitle="Linear attenuation calculations for Bismuth" custom-width="800px"></image-component>
                 <image-component tag="cu-image" source="assets/cu-calculation.png"
-                    subtitle="Linear attenuation calculations for Copper"
-                    custom-width="800px"></image-component>
+                    subtitle="Linear attenuation calculations for Copper" custom-width="800px"></image-component>
                 <image-component tag="fe-image" source="assets/fe-calculation.png"
-                    subtitle="Linear attenuation calculations for Iron"
-                    custom-width="800px"></image-component>
+                    subtitle="Linear attenuation calculations for Iron" custom-width="800px"></image-component>
                 <image-component tag="mg-image" source="assets/mg-calculation.png"
-                    subtitle="Linear attenuation calculations for Magnesium"
-                    custom-width="800px"></image-component>
+                    subtitle="Linear attenuation calculations for Magnesium" custom-width="800px"></image-component>
                 <image-component tag="ti-image" source="assets/ti-calculation.png"
-                    subtitle="Linear attenuation calculations for Titanium"
-                    custom-width="800px"></image-component>
+                    subtitle="Linear attenuation calculations for Titanium" custom-width="800px"></image-component>
                 <image-component tag="w-image" source="assets/w-calculation.png"
-                    subtitle="Linear attenuation calculations for Tungsten"
-                    custom-width="800px"></image-component>
+                    subtitle="Linear attenuation calculations for Tungsten" custom-width="800px"></image-component>
                 <image-component tag="zn-image" source="assets/zn-calculation.png"
-                    subtitle="Linear attenuation calculations for Zinc"
-                    custom-width="800px"></image-component>
+                    subtitle="Linear attenuation calculations for Zinc" custom-width="800px"></image-component>
             </div>
         </div>
 
@@ -1288,6 +1290,7 @@
 
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
     <script type="module" src="./components/table-component/table-component.js"></script>
+
 </body>
 
 </html>

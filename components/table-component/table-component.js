@@ -19,7 +19,13 @@ new gridjs.Grid({
 }).render(document.getElementById("table-2"));
 
 new gridjs.Grid({
-  columns: ["Category", "Criteria", "Rationale", "Metric", "Measurement"],
+  columns: [
+    { name: "Category", width: "15%" },
+    { name: "Criteria", width: "20%"},
+    { name: "Rationale", width: "20%"},
+    { name: "Metric", width: "20%"},
+    { name: "Measurement", width: "20%"}
+  ],
   data: [
     ["Efficacy", "Block at least 90% of potential radiation exposure", "Current alternatives to lead gowns provide less radiation protection.", "Percentage of radiation blocked (% radiation attenuation)", "Radiation shielding tests (e.g., using X-ray sources and radiation detectors)"],
     ["Usability", "Weight must not exceed 7 kg", "Current lead gowns weigh around 7 kg. Fatigue from this weight is the top complaint.", "Weight (kg)", "Weighing scale"],
@@ -27,6 +33,7 @@ new gridjs.Grid({
     ["Usability", "Comfortable to wear for at least 4 hours", "Prevents fatigue due to prolonged wear.", "Comfort rating (scale of 1-10)", "Subjective assessment by a panel of users"],
     ["Cost", "Not exceed 20% more than current lead aprons (SG$1,000)", "To remain appealing to key purchasing decision-makers (e.g., hospitals).", "Percentage cost increase (%)", "Market research and cost analysis"],
   ],
+  width: '100%',
 }).render(document.getElementById("table-3"));
 
 new gridjs.Grid({
@@ -46,7 +53,13 @@ new gridjs.Grid({
 }).render(document.getElementById("table-4"));
 
 new gridjs.Grid({
-  columns: ["Category", "Criteria", "Concept 1: 'LatticeGuard Pro'", "Concept 2: 'SuspendShield Flex'", "Concept 3: 'NanoTech ArtiFit'"],
+  columns: [
+    { name: "Category", width: "12%"},
+    { name: "Criteria", width: "20%"},
+    { name: "Concept 1: 'LatticeGuard Pro'", width: "28%"},
+    { name: "Concept 2: 'SuspendShield Flex'", width: "28%"},
+    { name: "Concept 3: 'NanoTech ArtiFit'", width: "28%"},
+  ],
   data: [
     ["Efficacy", "Block at least 90% of potential radiation exposure", "2", "1", "3"],
     ["Usability", "Weight must not exceed 7 kg", "2", "3", "1"],
@@ -278,36 +291,41 @@ class TableComponent extends HTMLElement {
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    // Removed Shadow DOM
+    // this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
     this.render();
   }
 
-  attributeChangedCallback(name, _, newValue) {
-    this[name] = newValue;
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === "subtitle" && oldValue !== newValue) {
+      this.render(); // Re-render when the subtitle changes
+    }
   }
 
   render() {
-    const div = document.createElement("div");
-    div.innerHTML = `
-    <slot></slot>
-    <sub>${this.subtitle}</sub>
-    <style>
-      :host {
-        display: block;
-        text-align: center;
-      }
-
-      sub {
-        font-size: 1rem;
-        font-style: italic;
-      }
-    </style>
-  `;
-
-    this.shadowRoot.appendChild(div);
+    // Changed to update this.innerHTML instead of shadowRoot
+    this.innerHTML = `
+      <div>
+        <slot></slot> <!-- Slot for table content -->
+        <div class="table-caption">${this.getAttribute("subtitle") || ""}</div>
+      </div>
+      <style>
+        :host {
+          display: block;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+        .table-caption {
+          margin-top: 10px;
+          font-size: 0.95rem;
+          color: #666;
+          font-style: italic;
+        }
+      </style>
+    `;
   }
 }
 

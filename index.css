@@ -1,18 +1,16 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  font-family: var(--sl-font-sans);
-}
+   /* index.css */
+   .content {
+    max-width: 1000px; /* Increase the max-width if necessary */
+    margin: auto;
+    padding: 10%;
+  }
 
-.content {
-  max-width: 800px;
-  margin: auto;
-  padding: 10%;
-}
+  .gridjs-table {
+    width: 100% !important;
+    overflow-x: auto;
+  }
 
-p {
-  text-align: justify;
-  font-size: 1.1rem;
-}
+  .gridjs-th,
+  .gridjs-td {
+    white-space: normal; /* Allow text to wrap */
+  }
