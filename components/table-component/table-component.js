@@ -359,12 +359,11 @@ class TableComponent extends HTMLElement {
         overflow: visible !important;
         white-space: normal !important;
         word-wrap: break-word !important;
-        min-width: max-content !important;
-        max-width: 200px !important; /* Adjust based on your needs */
         height: auto !important;
         line-height: 1.4 !important;
         text-align: left !important;
         box-sizing: border-box !important;
+        /* Removed min-width and max-width to allow headers to adjust */
       }
 
       /* Ensure header text wraps properly */
@@ -372,7 +371,7 @@ class TableComponent extends HTMLElement {
         overflow: visible !important;
         white-space: normal !important;
         word-wrap: break-word !important;
-        max-width: 200px !important; /* Adjust to prevent excessively wide columns */
+        /* Removed max-width to prevent text truncation */
       }
 
       /* Style for cells */
