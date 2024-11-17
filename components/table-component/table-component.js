@@ -330,7 +330,7 @@ class TableComponent extends HTMLElement {
       }
 
       ::slotted(div) {
-        min-width: 800px;  /* Minimum width to prevent squishing */
+        min-width: 800px;
       }
 
       /* Target gridjs specific classes */
@@ -341,26 +341,88 @@ class TableComponent extends HTMLElement {
 
       ::slotted(.gridjs-table) {
         width: 100%;
+        table-layout: fixed;
       }
 
+      /* Header cell styles */
       ::slotted(.gridjs-th) {
         background-color: #f8f9fa;
-        padding: 12px 24px;
-        white-space: normal !important;  /* Allow text wrapping */
-        min-width: 120px;  /* Minimum column width */
-        word-wrap: break-word;
+        padding: 12px 16px !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
         hyphens: auto;
+        line-height: 1.4;
+        vertical-align: top;
       }
 
+      /* Ensure minimum width based on first word */
+      ::slotted(.gridjs-th[data-column-id="No."]),
+      ::slotted(.gridjs-th[data-column-id="N..."]) {
+        min-width: 60px;
+      }
+
+      ::slotted(.gridjs-th[data-column-id="Category"]),
+      ::slotted(.gridjs-th[data-column-id="Catego..."]) {
+        min-width: 100px;
+      }
+
+      ::slotted(.gridjs-th[data-column-id="Functional"]),
+      ::slotted(.gridjs-th[data-column-id="Description"]),
+      ::slotted(.gridjs-th[data-column-id="Justification"]),
+      ::slotted(.gridjs-th[data-column-id="Criteria"]),
+      ::slotted(.gridjs-th[data-column-id="Rationale"]),
+      ::slotted(.gridjs-th[data-column-id="Metric"]),
+      ::slotted(.gridjs-th[data-column-id="Measurement"]),
+      ::slotted(.gridjs-th[data-column-id="Apron"]) {
+        min-width: 120px;
+      }
+
+      /* Content cell styles */
       ::slotted(.gridjs-td) {
-        padding: 12px 24px;
-        white-space: normal !important;  /* Allow text wrapping */
-        word-wrap: break-word;
+        padding: 12px 16px !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        line-height: 1.4;
+      }
+
+      /* Custom styles for specific content types */
+      ::slotted(.gridjs-td[data-column-id="Description"]),
+      ::slotted(.gridjs-td[data-column-id="Justification"]),
+      ::slotted(.gridjs-td[data-column-id="Rationale"]) {
+        min-width: 200px;
       }
     </style>
     `;
-    
+
     this.shadowRoot.appendChild(div);
+
+    // Add mutation observer to handle dynamic content
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList') {
+          this.adjustHeaders();
+        }
+      });
+    });
+
+    observer.observe(this, { childList: true, subtree: true });
+  }
+
+  adjustHeaders() {
+    // Wait for GridJS to fully render
+    setTimeout(() => {
+      const headers = this.querySelectorAll('.gridjs-th');
+      headers.forEach(header => {
+        const text = header.textContent;
+        const words = text.split(' ');
+        if (words.length > 1) {
+          // Add soft hyphens between words for better wrapping
+          header.innerHTML = words.join('&shy; ');
+        }
+      });
+    }, 100);
   }
 }
 
