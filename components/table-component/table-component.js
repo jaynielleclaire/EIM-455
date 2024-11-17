@@ -294,23 +294,68 @@ class TableComponent extends HTMLElement {
     div.innerHTML = `
     <div class="container">
       <div class="caption">${this.subtitle}</div>
-      <slot></slot>
+      <div class="table-wrapper">
+        <slot></slot>
+      </div>
     </div>
     <style>
       :host {
         display: block;
-        text-align: center;
+        width: 100%;
+        margin: 1rem 0;
       }
       
       .container {
         display: flex;
         flex-direction: column;
+        width: 100%;
       }
 
       .caption {
         font-size: 1rem;
         font-style: italic;
         margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+      }
+
+      /* Style the gridjs table within the component */
+      ::slotted(*) {
+        width: 100% !important;
+      }
+
+      ::slotted(div) {
+        min-width: 800px;  /* Minimum width to prevent squishing */
+      }
+
+      /* Target gridjs specific classes */
+      ::slotted(.gridjs-wrapper) {
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+
+      ::slotted(.gridjs-table) {
+        width: 100%;
+      }
+
+      ::slotted(.gridjs-th) {
+        background-color: #f8f9fa;
+        padding: 12px 24px;
+        white-space: normal !important;  /* Allow text wrapping */
+        min-width: 120px;  /* Minimum column width */
+        word-wrap: break-word;
+        hyphens: auto;
+      }
+
+      ::slotted(.gridjs-td) {
+        padding: 12px 24px;
+        white-space: normal !important;  /* Allow text wrapping */
+        word-wrap: break-word;
       }
     </style>
     `;

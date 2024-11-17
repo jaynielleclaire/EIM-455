@@ -1,6 +1,6 @@
 class ImageComponent extends HTMLElement {
   static get observedAttributes() {
-    return ["source", "subtitle", "size", "alt"];
+    return ["source", "subtitle", "size", "alt", "tag", "custom-width"];
   }
 
   constructor() {
@@ -21,8 +21,12 @@ class ImageComponent extends HTMLElement {
 
   getSizeStyles() {
     const sizes = {
+      tiny: {
+        maxWidth: '150px',
+        margin: '10px auto'
+      },
       small: {
-        maxWidth: '200px',
+        maxWidth: '250px',
         margin: '10px auto'
       },
       medium: {
@@ -39,6 +43,14 @@ class ImageComponent extends HTMLElement {
       }
     };
 
+    // Check if there's a custom width attribute
+    if (this.getAttribute('custom-width')) {
+      return {
+        maxWidth: this.getAttribute('custom-width'),
+        margin: '15px auto'
+      };
+    }
+
     return sizes[this.size || 'medium'];
   }
 
@@ -52,6 +64,7 @@ class ImageComponent extends HTMLElement {
           flex-direction: column;
           align-items: center;
           margin: ${styles.margin};
+          width: 100%;
         }
         
         img {
@@ -72,6 +85,7 @@ class ImageComponent extends HTMLElement {
           font-size: 0.9em;
           color: #666;
           font-style: italic;
+          max-width: ${styles.maxWidth || styles.width};
         }
       </style>
       
