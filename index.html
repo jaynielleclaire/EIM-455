@@ -1047,15 +1047,17 @@
         <div>
             <div id="appendix-g">
                 <h2> Appendix G: Linear Attenuation Calculations </h2>
-                <p>Thickness: A2 =0.0005 or 0.0006 or 0.0007 [constant]</p>
-                <p>Initial Intensity: B2 = 100 [constant]</p>
-                <p>After Intensity: C2 =B2*EXP(-F2*A2)</p>
-                <p>Volume Fraction of Pb: D2 =0.1 increments from 0 to 1 [constant]</p>
-                <p>Volume Fraction of Material: E2 =1-D2</p>
-                <p>Composite mu: F2 =(D2*$K$7)+(E2*$K$8)</p>
-                <p>Attenuation Ratio: G2 =LN(B2/C2)</p>
-                <p>Composite Density: H2 =(D2*$K$5)+(E2*$K$6)</p>
-                <p>Weight Reduction: I2 =(1-H2/$K$5)*100</p>
+                <ul>
+                <li>Thickness: A2 =0.0005 or 0.0006 or 0.0007 [constant]</li>
+                <li>Initial Intensity: B2 = 100 [constant]</li>
+                <li>After Intensity: C2 =B2*EXP(-F2*A2)</li>
+                <li>Volume Fraction of Pb: D2 =0.1 increments from 0 to 1 [constant]</li>
+                <li>Volume Fraction of Material: E2 =1-D2</li>
+                <li>Composite mu: F2 =(D2*$K$7)+(E2*$K$8)</li>
+                <li>Attenuation Ratio: G2 =LN(B2/C2)</li>
+                <li>Composite Density: H2 =(D2*$K$5)+(E2*$K$6)</li>
+                <li>Weight Reduction: I2 =(1-H2/$K$5)*100</li>
+                </ul>
                 <image-component tag="al-image" source="assets/al-calculation.png"
                     subtitle="Linear attenuation calculations for Aluminium"></image-component>
                 <image-component tag="bi-image" source="assets/bi-calculation.png"
