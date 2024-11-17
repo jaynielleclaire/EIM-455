@@ -98,6 +98,179 @@ new gridjs.Grid({
   ]
 }).render(document.getElementById("table-c"));
 
+new gridjs.Grid({
+  columns: [
+    { name: "Date", width: "10%" },
+    { name: "Location", width: "10%" },
+    { name: "Specialty", width: "15%" },
+    { name: "Designation", width: "15%" },
+    { name: "Talking Points", width: "25%" },
+    { name: "Main Complaint", width: "10%" }
+  ],
+  data: [
+    [
+      "7-Aug",
+      "NNI",
+      "Radiology",
+      "Associate Consultant",
+      '"More likely to get back pain/spondylosis rather than radiation-related cancers."',
+      "Weight"
+    ],
+    [
+      "8-Aug",
+      "SKP",
+      "Radiology",
+      "Radiographer",
+      '"Difficult to communicate positioning to patients."',
+      "Communication"
+    ],
+    [
+      "8-Aug",
+      "SKP",
+      "Radiology",
+      "Radiographer",
+      '"Dosimeter needs to be sent to NEA for checking every 2 weeks."',
+      "Logistics"
+    ],
+    [
+      "8-Aug",
+      "SKP",
+      "Family Medicine",
+      "Consultant",
+      '"Caregivers wear the lead apron and thyroid shield in cases where the patient requires assistance (unable to stand, child)."',
+      "Physical"
+    ],
+    [
+      "13-Aug",
+      "SGH",
+      "Orthopedics",
+      "Consultant",
+      '"Surgeons don’t typically carry dosimeters but only wear lead aprons and thyroid shields in OT."',
+      "Discomfort"
+    ],
+    [
+      "19-Aug",
+      "DUKENUS",
+      "Radiology",
+      "Radiographer",
+      '"The worst part is how heavy the lead aprons are."',
+      "Weight"
+    ],
+    [
+      "19-Aug",
+      "SGH",
+      "Radiology",
+      "Consultant",
+      '"Lead shields and personal gear need to be more work-friendly; lead gowns can interfere with procedures."',
+      "Usability"
+    ],
+    [
+      "19-Aug",
+      "SGH",
+      "Radiology",
+      "Radiographer",
+      '"Proper collimation to reduce scatter radiation and proper centering of the body region is essential."',
+      "Logistics"
+    ],
+    [
+      "19-Aug",
+      "SGH",
+      "Orthopedics",
+      "Consultant",
+      '"Personal dosimeters and personalized safety equipment should be provided for regular staff."',
+      "Logistics"
+    ],
+    [
+      "22-Aug",
+      "SGH",
+      "Vascular",
+      "Consultant",
+      '"Compliance with wearing dosimeters is a major issue."',
+      "Compliance"
+    ],
+    [
+      "22-Aug",
+      "TTSH",
+      "Orthopedics",
+      "Nurse",
+      '"Areas not covered by the lead apron and the weight of the apron are concerns."',
+      "Protection, Weight"
+    ],
+    [
+      "23-Aug",
+      "THK",
+      "Family Medicine",
+      "Assistant Professor",
+      '"Peripheral blood smear tests can detect blood cancers with a latency of 5 years."',
+      "Compliance"
+    ],
+    [
+      "26-Aug",
+      "SGH",
+      "Urology",
+      "Consultant",
+      '"We would like sponsorship for lead glasses due to cataract formation risks."',
+      "Availability"
+    ],
+    [
+      "27-Aug",
+      "NUH",
+      "Anesthesia",
+      "Associate Consultant",
+      '"Procedures to ensure everyone is covered before radiation shots are not always adhered to."',
+      "Logistics"
+    ],
+    [
+      "27-Aug",
+      "NUH",
+      "Orthopedics",
+      "Resident",
+      '"Radiation exposure is often surgeon-induced; PPE is sometimes purchased at personal expense."',
+      "Discomfort"
+    ],
+    [
+      "30-Aug",
+      "SGH",
+      "Orthopedics",
+      "Nurse",
+      '"The weight of the lead apron causes muscle strain, leading to hospitalization leave in severe cases."',
+      "Weight"
+    ],
+    [
+      "30-Aug",
+      "SGH",
+      "Orthopedics",
+      "Nurse",
+      '"Hygiene concerns with aprons; taller surgeons often have no choice but to wear ill-fitting full-size gowns."',
+      "Weight, Hygiene"
+    ],
+    [
+      "1-Sep",
+      "SKH",
+      "Orthopedics",
+      "MOPEX",
+      '"Heavy lead aprons limit movement; some find thyroid shields too warm to wear."',
+      "Weight, Mobility"
+    ],
+    [
+      "1-Sep",
+      "Private",
+      "Cardiology",
+      "Medical Director",
+      '"Lead aprons worn under scrubs lead to sweat accumulation, with little time for cleaning between uses."',
+      "Hygiene"
+    ],
+    [
+      "2-Sep",
+      "Nagoya University Hospital",
+      "Orthopedics",
+      "Associate Professor",
+      '"In Japan, individuals prefer personal lead gowns due to hygiene concerns; improper storage can cause lead cracks."',
+      "Hygiene, Durability"
+    ]
+  ]
+}).render(document.getElementById("table-b"));
+
 class TableComponent extends HTMLElement {
   static get observedAttributes() {
     return ["subtitle"];
