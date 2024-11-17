@@ -512,11 +512,11 @@
                 <div id="sub-section-4-header-4">
                     <h3>4.4 Assembly Process</h3>
                     <ol>
-                        <li>1. The lattice structure is manufactured as an integrated unit using 3D printing or molding
+                        <li>The lattice structure is manufactured as an integrated unit using 3D printing or molding
                             techniques.</li>
-                        <li>2. Radiation shielding material is inserted into lattice openings, either as pre-formed
+                        <li>Radiation shielding material is inserted into lattice openings, either as pre-formed
                             sheets or as granules that are compressed to fit.</li>
-                        <li>3. The completed composite provides optimal strength, flexibility, and protection in a
+                        <li>The completed composite provides optimal strength, flexibility, and protection in a
                             lightweight design.</li>
                     </ol>
                 </div>
@@ -537,364 +537,627 @@
         <div>
             <div id="section-header-5">
                 <h2> 5. Prototyping and Testing </h2>
+                <p>
+                    The evaluation of any proposed solution must address two fundamental criteria:
+                </p>
+                <ol>
+                    <li>
+                        Radiation Protection Efficacy: The solution must provide radiation protection comparable to
+                        current lead aprons
+                    </li>
+                    <li>
+                        Ergonomic Performance: The solution must optimize user comfort through improved weight
+                        distribution and overall design
+                    </li>
+                </ol>
+
+                <div id="sub-section-5-header-1">
+                    <h3>5.1 Material Selection Using Linear Attenuation</h3>
+                    <p>To evaluate radiation protection efficacy, we conducted a comprehensive analysis of linear
+                        attenuation properties and potential weight reduction compared to conventional lead aprons.
+                        Linear attenuation coefficient (μ) quantifies a material's effectiveness in absorbing or
+                        scattering incident radiation, with higher coefficients indicating superior radiation shielding
+                        capabilities [15]. This relationship is described by the following equation:</p>
+                    <image-component tag="equation-image" source="assets/equation.png"
+                        subtitle="Figure 9: Linear Attenuation Equation [15]"></image-component>
+                    <p>
+                        Our analysis encompassed a range of potential materials including Bismuth, Tungsten, Copper,
+                        Zinc, Iron, Magnesium, Aluminium, and Titanium (detailed calculations available in Appendix G).
+                        Testing conditions were standardized at 0.5mm thickness and 100keV incident radiation energy,
+                        which represents typical diagnostic X-ray conditions.
+                    </p>
+                    <p>
+                        While Tungsten demonstrated superior attenuation compared to pure lead, its significantly higher
+                        density (19.3 g/cm³ versus lead's 11.4 g/cm³) rendered it impractical for wearable protection
+                        despite its excellent shielding properties.
+                    </p>
+                    <p>
+                        The most promising alternative composition identified was a 90% lead and 10% bismuth mixture,
+                        which achieved an attenuation ratio of 0.0311, compared to pure lead's 0.0315. This combination
+                        offers a modest weight reduction of 1.37% while maintaining near-equivalent radiation
+                        protection. However, the slight decrease in attenuation efficiency, though minimal, requires
+                        careful consideration given the critical nature of radiation protection in medical settings.
+                        Further optimization of the material composition may be necessary to achieve equivalent
+                        protection while maximizing weight reduction.
+                    </p>
+                </div>
+
+                <div id="sub-section-5-header-2">
+                    <h3>5.2 Usability Testing Protocol and Methodology</h3>
+                    <p> The usability testing protocol has been designed to comprehensively evaluate the ergonomic
+                        performance of our prototype apron against traditional lead aprons in a simulated clinical
+                        environment. Our testing framework encompasses both quantitative measurements and qualitative
+                        user feedback to ensure a thorough evaluation of the design's effectiveness.</p>
+                    <div id="sub-section-5-header-2-1">
+                        <h4>5.2.1 Research Objectives</h4>
+                        <ul>
+                            <li>
+                                Primary Question: How does the comfort level and usability of the prototype apron
+                                compare to traditional lead aprons in clinical settings?
+                            </li>
+                            <li>Secondary Questions:</li>
+                            <ul>
+                                <li>How does extended wear affect user fatigue patterns?</li>
+                                <li>What are the perceived ergonomic benefits compared to traditional designs?</li>
+                                <li>Which specific design elements contribute most to user comfort?</li>
+                                <li>How do physiological responses differ between the two designs?
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div id="sub-section-5-header-2-2">
+                        <h4>5.2.2 Experimental Design and Participant Selection</h4>
+                        <p>
+                            The study will involve 10-15 healthcare professionals, specifically selecting from
+                            practicing orthopaedic surgeons, nurses, and radiologists with experience using traditional
+                            lead aprons.
+                        </p>
+                        <p>
+                            Participant Requirements:
+                        <ul>
+                            <li>Have used traditional lead aprons before</li>
+                            <li>Currently practising in orthopaedics, nursing, or radiology</li>
+                            <li>No pre-existing musculoskeletal conditions</li>
+                            <li>Varied body types and experience levels for comprehensive assessment
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div id="sub-section-5-header-2-3">
+                        <h4>5.2.3 Testing Equipment and Materials</h4>
+                        <p>
+                            Our testing will utilize specialized equipment to gather precise data on user experience and
+                            physiological responses:
+                        </p>
+                        <p>
+                            Essential Equipment:
+                        <ul>
+                            <li>Prototype apron with modular weight distribution system</li>
+                            <li>Traditional lead apron (control)</li>
+                            <li>Medical-grade heart rate monitor</li>
+                            <li>Digital grip strength dynamometer</li>
+                            <li>Motion capture system for posture analysis</li>
+                            <li>EMG sensors for muscle fatigue assessment</li>
+                        </ul>
+                        </p>
+                        <p>
+                            Measurement Tools:
+                        <ul>
+                            <li>Comfort assessment questionnaires (5-point Likert scale)</li>
+                            <li>Standardized fatigue evaluation forms</li>
+                            <li>Semi-structured interview protocols</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div id="sub-section-5-header-2-4">
+                        <h4>5.2.4 Testing Protocol Implementation</h4>
+                        <p>
+                            The testing protocol consists of three distinct phases:
+                        </p>
+                        <ul>
+                            <li>Phase 1: Baseline Assessment (15 minutes)
+                                <ul>
+                                    <li>Initial physiological measurements</li>
+                                    <li>Equipment familiarization</li>
+                                    <li>Collection of demographic data</li>
+                                </ul>
+                            </li>
+                            <li>Phase 2: Comparative Testing (30 minutes per apron)
+                                <ul>
+                                    <li>Each participant will complete a sequence of controlled activities:
+                                        <ul>
+                                            <li>Standing procedures (5 minutes)</li>
+                                            <li>Simulated surgical movements (10 minutes)</li>
+                                            <li>Recovery period (5 minutes)</li>
+                                            <li>Repeated movement sequence (10 minutes)</li>
+                                        </ul>
+                                    </li>
+                                    <li>During Phase 2, continuous monitoring will track:
+                                        <ul>
+                                            <li>Heart rate variations</li>
+                                            <li>Grip strength changes</li>
+                                            <li>Posture deviations</li>
+                                            <li>Real-time comfort ratings</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Phase 3: Post-Test Analysis
+                                <ul>
+                                    <li>This final phase focuses on gathering comprehensive feedback after the testing
+                                        period:
+                                        <ul>
+                                            <li>Immediate post-wear comfort assessment</li>
+                                            <li>Completion of detailed ergonomic questionnaire</li>
+                                            <li>Semi-structured interviews for in-depth feedback</li>
+                                            <li>Comparative analysis between prototype and traditional apron</li>
+                                            <li>Documentation of any physical stress indicators</li>
+                                            <li>Collection of specific design improvement suggestions</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="sub-section-5-header-2-5">
+                        <h4>5.2.5 Performance Metrics</h4>
+                        <p>
+                            Our analysis combines quantitative and qualitative measurements to provide comprehensive
+                            insights:
+                        </p>
+                        <p>Quantitative Parameters:</p>
+                        <ul>
+                            <li>Physiological responses (heart rate, muscle fatigue)</li>
+                            <li>Postural analysis data</li>
+                            <li>Comfort scores (1-5 scale)</li>
+                            <li>Time-to-fatigue measurements</li>
+                        </ul>
+                        <p>Qualitative Assessments:</p>
+                        <ul>
+                            <li>User experience narratives</li>
+                            <li>Design improvement suggestions</li>
+                            <li>Workflow impact feedback</li>
+                        </ul>
+                    </div>
+
+
+
+                    <div id="sub-section-5-header-2-6">
+                        <h4>5.2.6 Expected Outcomes and Success Criteria</h4>
+                        <p>
+                            We anticipate that the prototype apron will demonstrate measurable improvements over
+                            traditional designs. Success will be determined by achieving specific performance targets:
+                        </p>
+                        <p>Primary Success Metrics:</p>
+                        <ul>
+                            <li>Minimum 20% reduction in reported discomfort scores</li>
+                            <li>Statistically significant improvement in posture maintenance</li>
+                            <li>Reduced physiological stress indicators</li>
+                            <li>Maintained radiation protection effectiveness</li>
+                        </ul>
+                        <p>Secondary Benefits:</p>
+                        <ul>
+                            <li>Enhanced mobility during procedures</li>
+                            <li>Improved task performance</li>
+                            <li>Positive user feedback regarding weight distribution</li>
+                            <li>Identification of further optimization opportunities</li>
+                        </ul>
+                        <p>
+                            Through this comprehensive testing protocol, we aim to validate our design improvements and
+                            identify any areas requiring refinement before proceeding to final production. The
+                            combination of quantitative data and qualitative feedback will provide crucial insights for
+                            optimizing the prototype's design to meet the demanding needs of healthcare professionals in
+                            real-world clinical settings.
+                        </p>
+                    </div>
+
+                </div>
             </div>
-        </div>
 
 
-        <br />
-        <br />
-        <sl-divider></sl-divider>
-        <div>
-            <div id="section-header-6">
-                <h2> 6. Future Work </h2>
-            </div>
-        </div>
-
-        <!-- This is an example of how you can use the references component to create references -->
-        <div id="references" class="references">
+            <br />
+            <br />
             <sl-divider></sl-divider>
-            <h2>References</h2>
-            <ul>
-                <li>
-                    Brody, J. E. (2007, December 11). Mental reserves keep brain agile. The New York Times. Retrieved
-                    from
-                    http://www.dowjones.com/factiva/
-                </li>
-                <li>
-                    Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008, May). Enhancing worker well-being:
-                    Occupational
-                    health psychologists convene to share their research on work, stress, and health. Monitor on
-                    Psychology,
-                    39(5), 26-29.
-                </li>
-                <li>
-                    Jones, T. J., & Fields, N. (2003). Emotional quotient and personality. E-Journal of Applied
-                    Psychology, 2(2),
-                    38-45. Retrieved from http://ejournalappliedpsyc/index.php/ejap
-                </li>
-            </ul>
-        </div>
-
-
-        <br />
-        <br />
-        <sl-divider></sl-divider>
-        <div>
-            <div id="appendix-a">
-                <h2> Appendix A: Biweekly Meetings with Clinical Mentor </h2>
+            <div>
+                <div id="section-header-6">
+                    <h2> 6. Future Work </h2>
+                </div>
             </div>
-        </div>
 
-        <br />
-        <br />
-        <sl-divider></sl-divider>
-        <div>
-            <div id="appendix-b">
-                <h2> Appendix B: Primary Research with Healthcare Professionals </h2>
+            <!-- This is an example of how you can use the references component to create references -->
+            <div id="references" class="references">
+                <sl-divider></sl-divider>
+                <h2>References</h2>
+                <ul>
+                    <li>
+                        Brody, J. E. (2007, December 11). Mental reserves keep brain agile. The New York Times.
+                        Retrieved
+                        from
+                        http://www.dowjones.com/factiva/
+                    </li>
+                    <li>
+                        Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008, May). Enhancing worker
+                        well-being:
+                        Occupational
+                        health psychologists convene to share their research on work, stress, and health. Monitor on
+                        Psychology,
+                        39(5), 26-29.
+                    </li>
+                    <li>
+                        Jones, T. J., & Fields, N. (2003). Emotional quotient and personality. E-Journal of Applied
+                        Psychology, 2(2),
+                        38-45. Retrieved from http://ejournalappliedpsyc/index.php/ejap
+                    </li>
+                </ul>
             </div>
-        </div>
 
 
-        <br />
-        <br />
-        <sl-divider></sl-divider>
-        <div>
-            <div id="appendix-c">
-                <h2> Appendix C: Good-to-have Design Specifications [1] </h2>
-                <table-component subtitle="Good-to-have Design Specifications">
-                    <div id="table-c"></div>
-                </table-component>
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+            <div>
+                <div id="appendix-a">
+                    <h2> Appendix A: Biweekly Meetings with Clinical Mentor </h2>
+                </div>
             </div>
-        </div>
 
-
-        <br />
-        <br />
-        <sl-divider></sl-divider>
-        <div>
-            <div id="appendix-d">
-                <h2> Appendix D: Functional Requirements in Detail </h2>
-                <p>
-                    1. Radiation Protection
-                </p>
-                <p>
-                    Material Optimization: Develop a composite material that combines lead-free elements (like antimony
-                    and tungsten) that can achieve equivalent attenuation to 0.50 mm lead, focusing on optimal thickness
-                    and density.
-                </p>
-                <p>
-                    Layered Shielding Design: Use a multi-layered structure where different layers focus on absorbing
-                    specific radiation energy ranges, maximizing overall protection while maintaining flexibility.
-                </p>
-                <p>
-                    Radiation-Specific Fabric Coating: Apply a specialized radiation-absorbing coating on the gown’s
-                    outer surface, which would enhance protection levels without adding significant weight.
-                </p>
-                <br />
-                <p>
-                    2. Weight Reduction
-                </p>
-                <p>
-                    High-Density, Lightweight Alloys: Incorporate high-density alloys or metal foams that provide
-                    necessary radiation shielding with reduced mass compared to traditional lead.
-                </p>
-                <p>
-                    Nanotechnology Integration: Use nanoparticles within the shielding material to reduce the weight
-                    while maintaining attenuation levels, particularly through the selective blocking of radiation
-                    frequencies.
-                </p>
-                <p>
-                    Advanced Polymer Composites: Develop composite materials using polymer matrices that are reinforced
-                    with lightweight, radiation-attenuating fillers to balance weight and protection.
-                </p>
-                <br />
-                <p>
-                    3. Ease of Movement
-                </p>
-                <p>
-                    Elastic Fabric Panels: Include flexible fabric sections at major joints (shoulders, hips) to allow a
-                    full range of motion without hindering protection.
-                </p>
-                <p>
-                    Articulated Design with Stretch Zones: Use an articulated design with stretchable zones that align
-                    with the body's natural movement areas to prevent restrictions.
-                </p>
-                <p>
-                    Modular Panel System: Create a modular gown structure with detachable and adjustable panels at key
-                    areas, allowing customizations based on mobility needs during different procedures.
-                </p>
-                <br />
-                <p>
-                    4. Weight Support
-                </p>
-                <p>
-                    Shoulder Harness or Suspension System: Attach an adjustable shoulder harness or strap system to
-                    distribute weight away from the lower back and shoulders.
-                </p>
-                <p>
-                    Load-Bearing Belt: Integrate a supportive belt around the waist to transfer some of the weight onto
-                    the hips, alleviating shoulder strain.
-                </p>
-                <p>
-                    External Support Attachment: Consider options to attach the gown to an external support frame or
-                    rail, reducing the direct weight on the body during long procedures.
-                </p>
-                <br />
-                <p>
-                    5. Weight Distribution System
-                </p>
-                <p>
-                    Built-In Shoulder and Waist Padding: Use ergonomically shaped padding at the shoulders and waist to
-                    help distribute weight evenly and reduce strain points.
-                </p>
-                <p>
-                    Cross-Body Strap Configuration: Incorporate cross-body straps that shift weight diagonally,
-                    balancing load across the torso instead of concentrating it on one area.
-                </p>
-                <p>
-                    Contoured Gown Design: Shape the gown to follow natural body contours, allowing even distribution
-                    and minimizing pressure on high-stress areas.
-                </p>
-                <br />
-                <p>
-                    6. Quick-Release Mechanism
-                </p>
-                <p>
-                    Magnetic Quick-Release Fasteners: Use magnetic closures that can be easily disengaged with a single
-                    pull, allowing for fast removal without compromising security during wear.
-                </p>
-                <p>
-                    Velcro Strips for Rapid Detachment: Integrate strategically placed Velcro strips for easy gown
-                    removal in emergency situations.
-                </p>
-                <p>
-                    Press-Button Release Clips: Install press-button clips at the shoulders or waist for swift
-                    detachment when needed.
-                </p>
-                <br />
-                <p>
-                    7. Ergonomic Design for Long Wear Duration
-                </p>
-                <p>
-                    Pressure-Relieving Foam Padding: Place memory foam padding in high-stress areas to provide
-                    additional comfort during extended use.
-                </p>
-                <p>
-                    Adjustable Shoulder Pads: Allow users to adjust shoulder padding thickness to customize comfort
-                    according to their individual needs.
-                </p>
-                <p>
-                    Neck Cushioning Inserts: Integrate soft neck inserts to reduce discomfort around the neck, a common
-                    pressure point during long procedures.
-                </p>
-                <br />
-                <p>
-                    8. Sweat Absorption and Comfort
-                </p>
-                <p>
-                    Moisture-Wicking Inner Lining: Use a breathable, moisture-wicking fabric on the interior to absorb
-                    sweat and keep the wearer dry.
-                </p>
-                <p>
-                    Antimicrobial Treatment: Apply an antimicrobial coating to the inner fabric to prevent odor and
-                    bacteria buildup due to prolonged wear.
-                </p>
-                <p>
-                    Ventilated Fabric Structure: Use a fabric structure with microscopic air channels to enhance
-                    breathability and reduce moisture retention.
-                </p>
-                <br />
-                <p>
-                    9. Ventilation
-                </p>
-                <p>
-                    Mesh Ventilation Panels: Add mesh or perforated panels in areas prone to heat buildup (back,
-                    underarms) to improve airflow.
-                </p>
-                <p>
-                    Active Cooling System: Integrate a small, battery-operated fan or cooling pack within the gown for
-                    active air circulation in heat-prone zones.
-                </p>
-                <p>
-                    Breathable Layering: Design the gown with an inner layer that allows airflow while maintaining
-                    radiation protection in the outer layer.
-                </p>
-                <br />
-                <p>
-                    10. Size and Fit Adjustment
-                </p>
-                <p>
-                    Adjustable Straps and Closures: Include easily adjustable straps and closures to allow customization
-                    for different body types.
-                </p>
-                <p>
-                    Elasticized Waist and Side Panels: Use elasticized sections along the waist and sides for a snug,
-                    adaptable fit that moves with the wearer.
-                </p>
-                <p>
-                    Customizable Velcro Panels: Implement Velcro panels that can be adjusted based on the user’s size
-                    and comfort preferences.
-                </p>
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+            <div>
+                <div id="appendix-b">
+                    <h2> Appendix B: Primary Research with Healthcare Professionals </h2>
+                </div>
             </div>
-        </div>
 
 
-        <br />
-        <br />
-        <sl-divider></sl-divider>
-        <div>
-            <div id="appendix-e">
-                <h2> Appendix E: Concepts Generated in Detail </h2>
-                <p>
-                    Concept 2 "SuspendShield Flex": The suspended radiation protective system emphasizes user comfort
-                    and safety through its sophisticated design approach. Material optimization with high-density
-                    lightweight alloys forms the foundation, while elastic fabric panels provide necessary flexibility.
-                    The core support system consists of a shoulder harness or suspension system, engineered to
-                    distribute weight effectively. Quick accessibility is achieved through magnetic quick-release
-                    fasteners, while neck cushioning inserts enhance comfort during extended wear. The system
-                    incorporates advanced comfort features including an antimicrobial treatment to maintain hygiene and
-                    an active cooling system to regulate temperature, making it particularly suitable for extended
-                    periods of use.
-                </p>
-                <p>
-                    Concept 3 "NanoTech ArtiFit": This protective suit concept represents a technological advancement in
-                    radiation protection through its layered shielding design and nanotechnology integration. The suit
-                    features an articulated design with strategic stretch zones, allowing for natural movement while
-                    maintaining protection. The external support attachment system works in conjunction with the
-                    contoured gown design to optimize weight distribution. Accessibility is enhanced through
-                    press-button release clips, while comfort is prioritized with adjustable shoulder pads. The
-                    ventilated fabric structure and breathable layering system ensure optimal temperature regulation.
-                    The addition of customizable Velcro panels allows for personalized adjustments, making this suit
-                    adaptable to various user preferences and requirements.
-                </p>
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+            <div>
+                <div id="appendix-c">
+                    <h2> Appendix C: Good-to-have Design Specifications [1] </h2>
+                    <table-component subtitle="Good-to-have Design Specifications">
+                        <div id="table-c"></div>
+                    </table-component>
+                </div>
             </div>
-        </div>
 
 
-        <br />
-        <br />
-        <sl-divider></sl-divider>
-        <div>
-            <div id="appendix-f">
-                <h2> Appendix F: Justification of Concepts’ Scores </h2>
-                <p>
-                    Block at least 90% of potential radiation exposure:
-                </p>
-                <p>
-                    Concept 1 (LatticeGuard Pro): 2 (Material optimization with high-density alloys)
-                </p>
-                <p>
-                    Concept 2 (SuspendShield Flex): 1 (Basic material optimization)
-                </p>
-                <p>
-                    Concept 3 (NanoTech ArtiFit): 3 (Layered shielding + nanotechnology integration)
-                </p>
-                <br />
-                <p>
-                    Weight must not exceed 7 kg:
-                </p>
-                <p>
-                    Concept 1 (LatticeGuard Pro): 2 (Lightweight alloys + lattice structure)
-                </p>
-                <p>
-                    Concept 2 (SuspendShield Flex): 3 (Suspended system eliminates weight on user)
-                </p>
-                <p>
-                    Concept 3 (NanoTech ArtiFit): 1 (Multiple layers could increase weight)
-                </p>
-                <br />
-                <p>
-                    Allow users to bend down with ease:
-                </p>
-                <p>
-                    Concept 1 (LatticeGuard Pro): 3 (Elastic panels + cross-body configuration)
-                </p>
-                <p>
-                    Concept 2 (SuspendShield Flex): 1 (Elastic panels but suspended system might restrict)
-                </p>
-                <p>
-                    Concept 3 (NanoTech ArtiFit): 2 (Articulated but multiple layers might limit flexibility)
-                </p>
-                <br />
-                <p>
-                    Comfortable to wear for at least 4 hours:
-                </p>
-                <p>
-                    Concept 1 (LatticeGuard Pro): 2 (Moisture-wicking + mesh ventilation + foam padding)
-                </p>
-                <p>
-                    Concept 2 (SuspendShield Flex): 3 (Active cooling + neck cushioning + weight elimination)
-                </p>
-                <p>
-                    Concept 3 (NanoTech ArtiFit): 1 (Ventilated structure but multiple layers might affect comfort)
-                </p>
-                <br />
-                <p>
-                    Cost (not exceed 20% more than SG$1000):
-                </p>
-                <p>
-                    Concept 1 (LatticeGuard Pro): 2 (Standard materials, complex structure)
-                </p>
-                <p>
-                    Concept 2 (SuspendShield Flex): 3 (Simpler construction)
-                </p>
-                <p>
-                    Concept 3 (NanoTech ArtiFit): 1 (Nanotechnology likely increases cost significantly)
-                </p>
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+            <div>
+                <div id="appendix-d">
+                    <h2> Appendix D: Functional Requirements in Detail </h2>
+                    <p>
+                        1. Radiation Protection
+                    </p>
+                    <p>
+                        Material Optimization: Develop a composite material that combines lead-free elements (like
+                        antimony
+                        and tungsten) that can achieve equivalent attenuation to 0.50 mm lead, focusing on optimal
+                        thickness
+                        and density.
+                    </p>
+                    <p>
+                        Layered Shielding Design: Use a multi-layered structure where different layers focus on
+                        absorbing
+                        specific radiation energy ranges, maximizing overall protection while maintaining
+                        flexibility.
+                    </p>
+                    <p>
+                        Radiation-Specific Fabric Coating: Apply a specialized radiation-absorbing coating on the
+                        gown’s
+                        outer surface, which would enhance protection levels without adding significant weight.
+                    </p>
+                    <br />
+                    <p>
+                        2. Weight Reduction
+                    </p>
+                    <p>
+                        High-Density, Lightweight Alloys: Incorporate high-density alloys or metal foams that
+                        provide
+                        necessary radiation shielding with reduced mass compared to traditional lead.
+                    </p>
+                    <p>
+                        Nanotechnology Integration: Use nanoparticles within the shielding material to reduce the
+                        weight
+                        while maintaining attenuation levels, particularly through the selective blocking of
+                        radiation
+                        frequencies.
+                    </p>
+                    <p>
+                        Advanced Polymer Composites: Develop composite materials using polymer matrices that are
+                        reinforced
+                        with lightweight, radiation-attenuating fillers to balance weight and protection.
+                    </p>
+                    <br />
+                    <p>
+                        3. Ease of Movement
+                    </p>
+                    <p>
+                        Elastic Fabric Panels: Include flexible fabric sections at major joints (shoulders, hips) to
+                        allow a
+                        full range of motion without hindering protection.
+                    </p>
+                    <p>
+                        Articulated Design with Stretch Zones: Use an articulated design with stretchable zones that
+                        align
+                        with the body's natural movement areas to prevent restrictions.
+                    </p>
+                    <p>
+                        Modular Panel System: Create a modular gown structure with detachable and adjustable panels
+                        at
+                        key
+                        areas, allowing customizations based on mobility needs during different procedures.
+                    </p>
+                    <br />
+                    <p>
+                        4. Weight Support
+                    </p>
+                    <p>
+                        Shoulder Harness or Suspension System: Attach an adjustable shoulder harness or strap system
+                        to
+                        distribute weight away from the lower back and shoulders.
+                    </p>
+                    <p>
+                        Load-Bearing Belt: Integrate a supportive belt around the waist to transfer some of the
+                        weight
+                        onto
+                        the hips, alleviating shoulder strain.
+                    </p>
+                    <p>
+                        External Support Attachment: Consider options to attach the gown to an external support
+                        frame or
+                        rail, reducing the direct weight on the body during long procedures.
+                    </p>
+                    <br />
+                    <p>
+                        5. Weight Distribution System
+                    </p>
+                    <p>
+                        Built-In Shoulder and Waist Padding: Use ergonomically shaped padding at the shoulders and
+                        waist
+                        to
+                        help distribute weight evenly and reduce strain points.
+                    </p>
+                    <p>
+                        Cross-Body Strap Configuration: Incorporate cross-body straps that shift weight diagonally,
+                        balancing load across the torso instead of concentrating it on one area.
+                    </p>
+                    <p>
+                        Contoured Gown Design: Shape the gown to follow natural body contours, allowing even
+                        distribution
+                        and minimizing pressure on high-stress areas.
+                    </p>
+                    <br />
+                    <p>
+                        6. Quick-Release Mechanism
+                    </p>
+                    <p>
+                        Magnetic Quick-Release Fasteners: Use magnetic closures that can be easily disengaged with a
+                        single
+                        pull, allowing for fast removal without compromising security during wear.
+                    </p>
+                    <p>
+                        Velcro Strips for Rapid Detachment: Integrate strategically placed Velcro strips for easy
+                        gown
+                        removal in emergency situations.
+                    </p>
+                    <p>
+                        Press-Button Release Clips: Install press-button clips at the shoulders or waist for swift
+                        detachment when needed.
+                    </p>
+                    <br />
+                    <p>
+                        7. Ergonomic Design for Long Wear Duration
+                    </p>
+                    <p>
+                        Pressure-Relieving Foam Padding: Place memory foam padding in high-stress areas to provide
+                        additional comfort during extended use.
+                    </p>
+                    <p>
+                        Adjustable Shoulder Pads: Allow users to adjust shoulder padding thickness to customize
+                        comfort
+                        according to their individual needs.
+                    </p>
+                    <p>
+                        Neck Cushioning Inserts: Integrate soft neck inserts to reduce discomfort around the neck, a
+                        common
+                        pressure point during long procedures.
+                    </p>
+                    <br />
+                    <p>
+                        8. Sweat Absorption and Comfort
+                    </p>
+                    <p>
+                        Moisture-Wicking Inner Lining: Use a breathable, moisture-wicking fabric on the interior to
+                        absorb
+                        sweat and keep the wearer dry.
+                    </p>
+                    <p>
+                        Antimicrobial Treatment: Apply an antimicrobial coating to the inner fabric to prevent odor
+                        and
+                        bacteria buildup due to prolonged wear.
+                    </p>
+                    <p>
+                        Ventilated Fabric Structure: Use a fabric structure with microscopic air channels to enhance
+                        breathability and reduce moisture retention.
+                    </p>
+                    <br />
+                    <p>
+                        9. Ventilation
+                    </p>
+                    <p>
+                        Mesh Ventilation Panels: Add mesh or perforated panels in areas prone to heat buildup (back,
+                        underarms) to improve airflow.
+                    </p>
+                    <p>
+                        Active Cooling System: Integrate a small, battery-operated fan or cooling pack within the
+                        gown
+                        for
+                        active air circulation in heat-prone zones.
+                    </p>
+                    <p>
+                        Breathable Layering: Design the gown with an inner layer that allows airflow while
+                        maintaining
+                        radiation protection in the outer layer.
+                    </p>
+                    <br />
+                    <p>
+                        10. Size and Fit Adjustment
+                    </p>
+                    <p>
+                        Adjustable Straps and Closures: Include easily adjustable straps and closures to allow
+                        customization
+                        for different body types.
+                    </p>
+                    <p>
+                        Elasticized Waist and Side Panels: Use elasticized sections along the waist and sides for a
+                        snug,
+                        adaptable fit that moves with the wearer.
+                    </p>
+                    <p>
+                        Customizable Velcro Panels: Implement Velcro panels that can be adjusted based on the user’s
+                        size
+                        and comfort preferences.
+                    </p>
+                </div>
             </div>
+
+
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+            <div>
+                <div id="appendix-e">
+                    <h2> Appendix E: Concepts Generated in Detail </h2>
+                    <p>
+                        Concept 2 "SuspendShield Flex": The suspended radiation protective system emphasizes user
+                        comfort
+                        and safety through its sophisticated design approach. Material optimization with
+                        high-density
+                        lightweight alloys forms the foundation, while elastic fabric panels provide necessary
+                        flexibility.
+                        The core support system consists of a shoulder harness or suspension system, engineered to
+                        distribute weight effectively. Quick accessibility is achieved through magnetic
+                        quick-release
+                        fasteners, while neck cushioning inserts enhance comfort during extended wear. The system
+                        incorporates advanced comfort features including an antimicrobial treatment to maintain
+                        hygiene
+                        and
+                        an active cooling system to regulate temperature, making it particularly suitable for
+                        extended
+                        periods of use.
+                    </p>
+                    <p>
+                        Concept 3 "NanoTech ArtiFit": This protective suit concept represents a technological
+                        advancement in
+                        radiation protection through its layered shielding design and nanotechnology integration.
+                        The
+                        suit
+                        features an articulated design with strategic stretch zones, allowing for natural movement
+                        while
+                        maintaining protection. The external support attachment system works in conjunction with the
+                        contoured gown design to optimize weight distribution. Accessibility is enhanced through
+                        press-button release clips, while comfort is prioritized with adjustable shoulder pads. The
+                        ventilated fabric structure and breathable layering system ensure optimal temperature
+                        regulation.
+                        The addition of customizable Velcro panels allows for personalized adjustments, making this
+                        suit
+                        adaptable to various user preferences and requirements.
+                    </p>
+                </div>
+            </div>
+
+
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+            <div>
+                <div id="appendix-f">
+                    <h2> Appendix F: Justification of Concepts’ Scores </h2>
+                    <p>
+                        Block at least 90% of potential radiation exposure:
+                    </p>
+                    <p>
+                        Concept 1 (LatticeGuard Pro): 2 (Material optimization with high-density alloys)
+                    </p>
+                    <p>
+                        Concept 2 (SuspendShield Flex): 1 (Basic material optimization)
+                    </p>
+                    <p>
+                        Concept 3 (NanoTech ArtiFit): 3 (Layered shielding + nanotechnology integration)
+                    </p>
+                    <br />
+                    <p>
+                        Weight must not exceed 7 kg:
+                    </p>
+                    <p>
+                        Concept 1 (LatticeGuard Pro): 2 (Lightweight alloys + lattice structure)
+                    </p>
+                    <p>
+                        Concept 2 (SuspendShield Flex): 3 (Suspended system eliminates weight on user)
+                    </p>
+                    <p>
+                        Concept 3 (NanoTech ArtiFit): 1 (Multiple layers could increase weight)
+                    </p>
+                    <br />
+                    <p>
+                        Allow users to bend down with ease:
+                    </p>
+                    <p>
+                        Concept 1 (LatticeGuard Pro): 3 (Elastic panels + cross-body configuration)
+                    </p>
+                    <p>
+                        Concept 2 (SuspendShield Flex): 1 (Elastic panels but suspended system might restrict)
+                    </p>
+                    <p>
+                        Concept 3 (NanoTech ArtiFit): 2 (Articulated but multiple layers might limit flexibility)
+                    </p>
+                    <br />
+                    <p>
+                        Comfortable to wear for at least 4 hours:
+                    </p>
+                    <p>
+                        Concept 1 (LatticeGuard Pro): 2 (Moisture-wicking + mesh ventilation + foam padding)
+                    </p>
+                    <p>
+                        Concept 2 (SuspendShield Flex): 3 (Active cooling + neck cushioning + weight elimination)
+                    </p>
+                    <p>
+                        Concept 3 (NanoTech ArtiFit): 1 (Ventilated structure but multiple layers might affect
+                        comfort)
+                    </p>
+                    <br />
+                    <p>
+                        Cost (not exceed 20% more than SG$1000):
+                    </p>
+                    <p>
+                        Concept 1 (LatticeGuard Pro): 2 (Standard materials, complex structure)
+                    </p>
+                    <p>
+                        Concept 2 (SuspendShield Flex): 3 (Simpler construction)
+                    </p>
+                    <p>
+                        Concept 3 (NanoTech ArtiFit): 1 (Nanotechnology likely increases cost significantly)
+                    </p>
+                </div>
+            </div>
+
         </div>
 
-    </div>
+        <!-- This is the code to display the scroll to top button for ergonomic -->
+        <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+        <!-- but it might reduce the user experience. -->
+        <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+            <sl-icon name="arrow-up" label="Settings"></sl-icon>
+        </sl-button>
 
-    <!-- This is the code to display the scroll to top button for ergonomic -->
-    <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
-    <!-- but it might reduce the user experience. -->
-    <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
-        <sl-icon name="arrow-up" label="Settings"></sl-icon>
-    </sl-button>
-
-    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-    <script type="module" src="./components/table-component/table-component.js"></script>
+        <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+        <script type="module" src="./components/table-component/table-component.js"></script>
 </body>
 
 </html>
