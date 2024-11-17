@@ -283,10 +283,23 @@ class TableComponent extends HTMLElement {
 
   connectedCallback() {
     this.render();
+    this.fixHeaders();
   }
 
   attributeChangedCallback(name, _, newValue) {
     this[name] = newValue;
+  }
+
+  fixHeaders() {
+    // Wait for GridJS to render
+    setTimeout(() => {
+      // Find all gridjs tables within the component
+      const tables = this.querySelectorAll('.gridjs-table');
+      tables.forEach(table => {
+        // Add our custom class to override GridJS styles
+        table.classList.add('custom-table');
+      });
+    }, 200);
   }
 
   render() {
@@ -321,108 +334,58 @@ class TableComponent extends HTMLElement {
       .table-wrapper {
         width: 100%;
         overflow-x: auto;
-        padding-bottom: 0.5rem;
       }
 
-      /* Style the gridjs table within the component */
-      ::slotted(*) {
-        width: 100% !important;
-      }
-
-      ::slotted(div) {
-        min-width: 800px;
-      }
-
-      /* Target gridjs specific classes */
+      /* Override GridJS default styles */
       ::slotted(.gridjs-wrapper) {
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        box-shadow: none !important;
+        border: 1px solid #e5e7eb !important;
+        border-radius: 8px !important;
+        overflow: visible !important;
       }
 
       ::slotted(.gridjs-table) {
-        width: 100%;
-        table-layout: fixed;
+        width: 100% !important;
+        border: none !important;
       }
 
-      /* Header cell styles */
+      /* Important: Override GridJS header styles */
+      ::slotted(.custom-table) th,
       ::slotted(.gridjs-th) {
-        background-color: #f8f9fa;
-        padding: 12px 16px !important;
+        background: #f8f9fa !important;
+        padding: 16px !important;
+        text-overflow: unset !important;
+        overflow: visible !important;
+        white-space: normal !important;
+        min-width: 100px !important;
+        height: auto !important;
+        line-height: 1.4 !important;
+      }
+
+      /* Ensure header text is visible */
+      ::slotted(.gridjs-th) div {
+        text-overflow: unset !important;
+        overflow: visible !important;
         white-space: normal !important;
         word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-        hyphens: auto;
-        line-height: 1.4;
-        vertical-align: top;
       }
 
-      /* Ensure minimum width based on first word */
-      ::slotted(.gridjs-th[data-column-id="No."]),
-      ::slotted(.gridjs-th[data-column-id="N..."]) {
-        min-width: 60px;
-      }
-
-      ::slotted(.gridjs-th[data-column-id="Category"]),
-      ::slotted(.gridjs-th[data-column-id="Catego..."]) {
-        min-width: 100px;
-      }
-
-      ::slotted(.gridjs-th[data-column-id="Functional"]),
-      ::slotted(.gridjs-th[data-column-id="Description"]),
-      ::slotted(.gridjs-th[data-column-id="Justification"]),
-      ::slotted(.gridjs-th[data-column-id="Criteria"]),
-      ::slotted(.gridjs-th[data-column-id="Rationale"]),
-      ::slotted(.gridjs-th[data-column-id="Metric"]),
-      ::slotted(.gridjs-th[data-column-id="Measurement"]),
-      ::slotted(.gridjs-th[data-column-id="Apron"]) {
-        min-width: 120px;
-      }
-
-      /* Content cell styles */
+      /* Style for cells */
       ::slotted(.gridjs-td) {
         padding: 12px 16px !important;
         white-space: normal !important;
         word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-        line-height: 1.4;
       }
 
-      /* Custom styles for specific content types */
-      ::slotted(.gridjs-td[data-column-id="Description"]),
-      ::slotted(.gridjs-td[data-column-id="Justification"]),
-      ::slotted(.gridjs-td[data-column-id="Rationale"]) {
-        min-width: 200px;
+      /* Force table to expand */
+      ::slotted(div) {
+        min-width: fit-content !important;
+        width: 100% !important;
       }
     </style>
     `;
-
+    
     this.shadowRoot.appendChild(div);
-
-    // Add mutation observer to handle dynamic content
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'childList') {
-          this.adjustHeaders();
-        }
-      });
-    });
-
-    observer.observe(this, { childList: true, subtree: true });
-  }
-
-  adjustHeaders() {
-    // Wait for GridJS to fully render
-    setTimeout(() => {
-      const headers = this.querySelectorAll('.gridjs-th');
-      headers.forEach(header => {
-        const text = header.textContent;
-        const words = text.split(' ');
-        if (words.length > 1) {
-          // Add soft hyphens between words for better wrapping
-          header.innerHTML = words.join('&shy; ');
-        }
-      });
-    }, 100);
   }
 }
 
