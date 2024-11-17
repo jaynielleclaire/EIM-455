@@ -354,17 +354,16 @@ class TableComponent extends HTMLElement {
       ::slotted(.gridjs-th) {
         background: #f8f9fa !important;
         padding: 16px !important;
-        text-overflow: unset !important;
-        overflow: visible !important;
         white-space: normal !important;
-        min-width: 100px !important;
+        word-wrap: break-word !important;
+        min-width: max-content !important;
         height: auto !important;
         line-height: 1.4 !important;
+        overflow: visible !important;
       }
 
-      /* Ensure header text is visible */
+      /* Ensure header text wraps */
       ::slotted(.gridjs-th) div {
-        text-overflow: unset !important;
         overflow: visible !important;
         white-space: normal !important;
         word-wrap: break-word !important;
