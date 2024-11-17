@@ -291,8 +291,7 @@ class TableComponent extends HTMLElement {
 
   constructor() {
     super();
-    // Removed Shadow DOM
-    // this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -300,32 +299,46 @@ class TableComponent extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === "subtitle" && oldValue !== newValue) {
-      this.render(); // Re-render when the subtitle changes
+    if (name === "subtitle") {
+      this.subtitle = newValue;
+      this.render();
     }
   }
 
   render() {
-    // Changed to update this.innerHTML instead of shadowRoot
-    this.innerHTML = `
-      <div>
-        <slot></slot> <!-- Slot for table content -->
-        <div class="table-caption">${this.getAttribute("subtitle") || ""}</div>
-      </div>
+    const container = document.createElement("div");
+
+    // Render the table with caption
+    container.innerHTML = `
       <style>
         :host {
           display: block;
-          margin-bottom: 1rem;
+          margin-bottom: 20px;
+        }
+
+        .table-container {
           text-align: center;
         }
+
         .table-caption {
-          margin-top: 10px;
-          font-size: 0.95rem;
-          color: #666;
-          font-style: italic;
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .table {
+          margin: 0 auto;
+          width: 80%;
         }
       </style>
+      <div class="table-container">
+        ${this.subtitle ? `<div class="table-caption">${this.subtitle}</div>` : ""}
+        <div id="table"></div>
+      </div>
     `;
+
+    this.shadowRoot.innerHTML = ""; // Clear the shadow DOM
+    this.shadowRoot.appendChild(container);
   }
 }
 
