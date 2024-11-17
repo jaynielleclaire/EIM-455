@@ -317,12 +317,13 @@ class TableComponent extends HTMLElement {
         }
 
         .table-container {
-          text-align: center;
+          text-align: left;
         }
 
         .table-caption {
-          font-size: 1.2rem;
-          font-weight: bold;
+          font-size: 0.9em;
+          color: #666;
+          font-style: italic;
           margin-bottom: 10px;
         }
 
