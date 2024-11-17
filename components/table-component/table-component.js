@@ -347,6 +347,7 @@ class TableComponent extends HTMLElement {
       ::slotted(.gridjs-table) {
         width: 100% !important;
         border: none !important;
+        table-layout: auto !important; /* Ensure table adjusts to content */
       }
 
       /* Important: Override GridJS header styles */
@@ -354,19 +355,24 @@ class TableComponent extends HTMLElement {
       ::slotted(.gridjs-th) {
         background: #f8f9fa !important;
         padding: 16px !important;
+        text-overflow: unset !important;
+        overflow: visible !important;
         white-space: normal !important;
         word-wrap: break-word !important;
         min-width: max-content !important;
+        max-width: 200px !important; /* Adjust based on your needs */
         height: auto !important;
         line-height: 1.4 !important;
-        overflow: visible !important;
+        text-align: left !important;
+        box-sizing: border-box !important;
       }
 
-      /* Ensure header text wraps */
+      /* Ensure header text wraps properly */
       ::slotted(.gridjs-th) div {
         overflow: visible !important;
         white-space: normal !important;
         word-wrap: break-word !important;
+        max-width: 200px !important; /* Adjust to prevent excessively wide columns */
       }
 
       /* Style for cells */
