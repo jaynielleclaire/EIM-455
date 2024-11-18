@@ -1,6 +1,7 @@
    /* index.css */
    .content {
-    max-width: 1000px; /* Increase the max-width if necessary */
+    max-width: 1000px;
+    /* Increase the max-width if necessary */
     margin: auto;
     padding: 10%;
   }
@@ -12,5 +13,6 @@
 
   .gridjs-th,
   .gridjs-td {
-    white-space: normal; /* Allow text to wrap */
+    white-space: normal;
+    /* Allow text to wrap */
   }

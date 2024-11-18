@@ -56,7 +56,7 @@ class ImageComponent extends HTMLElement {
 
   render() {
     const styles = this.getSizeStyles();
-    
+
     const template = `
       <style>
         .image-container {
